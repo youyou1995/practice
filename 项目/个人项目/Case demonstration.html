@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<style type="text/css">
+			html,
+			body {
+				font-family: "微软雅黑";
+				font-size: 12px;
+			}
+			
+			.container {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.clearfix:after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+			
+			.relative {
+				position: relative;
+			}
+			
+			.trans5 {
+				-webkit-transition: all 0.5s ease-in-out;
+				-moz-transition: all 0.5s ease-in-out;
+				-ms-transition: all 0.5s ease-in-out;
+				-o-transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;
+				: ;
+			}
+			
+			.fix-bg {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 60px;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 100;
+			}
+			
+			.fix-big .fix-box ul .fix-red {
+				color: #e3120b;
+			}
+			
+			.fix-logo {
+				width: 150px;
+				height: 50px;
+				padding: 4px 0 6px 0;
+			}
+			
+			.fix-box {
+				margin-right: 20px;
+			}
+			
+			.fix-box ul {}
+			
+			.fix-box li {
+				padding: 18px 28px;
+				color: #fff;
+			}
+			
+			.fix-box li a {
+				color: #FFFFFF;
+				font-size: 14px;
+			}
+			
+			.fix-box li a:hover {
+				color: #e3120b;
+			}
+			
+			.fix-box ul li .list {
+				position: absolute;
+				top: 60px;
+				left: 0;
+				background-color: #222;
+				z-index: 5;
+				width: 140px;
+				display: none;
+			}
+			
+			.fix-box ul li .list .list-li {
+				/*width: 100%;*/
+			}
+			
+			.fix-box ul li .list .list-li .list-li-a {
+				font-weight: 500;
+				padding: 12px 10px;
+				transition: all .2s ease-in-out;
+				color: #fff;
+			}
+			
+			.fix-box ul li .list .list-li:hover {
+				background-color: #E3120B;
+			}
+			
+			.fix-line {
+				position: absolute;
+				bottom: 0;
+				left: 84px;
+				width: 112px;
+				background-color: #E3120B;
+				height: 2px;
+				z-index: 5;
+				opacity: 1;
+			}
+			/*侧边栏*/
+			
+			.right-box {
+				position: fixed;
+				right: 7px;
+				bottom: 63px;
+				z-index: 99;
+				height: 124px;
+				/*background-color: red;*/
+			}
+			
+			.right-wechat {
+				background-color: #e3120b;
+				border: 1px solid #e3120b;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 186px;
+				z-index: 99;
+				font-size: 18px;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			.right-wechat i {
+				color: #fff;
+				margin-top: 9px;
+			}
+			
+			.right-blog {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 146px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+			}
+			
+			.right-box i {
+				font-size: 22px;
+				margin-top: 9px;
+				margin-top: 9px;
+			}
+			
+			.right-phone {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 106px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+			}
+			
+			.right-return {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 66px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+				opacity: 0;
+			}
+			
+			.right-box .right-wechat:hover i {
+				color: #FFFFFF;
+			}
+			
+			.right-box a:hover i {
+				color: #E3120B;
+			}
+			
+			.top-bg {
+				background-color: #303030;
+				width: 100%;
+				height: 360px;
+			}
+			
+			.top {
+				background-color: #303030;
+				height: 60px;
+				width: 100%;
+			}
+			
+			.top-pic-box1 {
+				position: fixed;
+				width: 100%;
+			}
+			
+			.top-pic-box {
+				position: relative;
+				height: 300px;
+				top: 0px;
+			}
+			
+			.top-pic {
+				background: url(img/two/top-1.jpg) top center no-repeat;
+				width: 100%;
+				height: 300px;
+			}
+			
+			.title-bg {
+				background-color: #252525;
+			}
+			
+			.title-box {
+				margin: 20px 0;
+			}
+			
+			.title-left a {
+				font-size: 13px;
+				color: #737373;
+				padding: 8px 20px;
+				margin-right: 5px;
+			}
+			
+			.title-left .red {
+				background-color: #e3120b;
+				color: #FFFFFF;
+			}
+			
+			.title-left a:hover {
+				background-color: #e3120b;
+				color: #FFFFFF;
+			}
+			
+			.title-right {
+				color: #999;
+			}
+			
+			.title-right a:hover {
+				color: #E3120B;
+			}
+			
+			.title-pic {
+				padding-top: 40px;
+				padding-bottom: 20px;
+				/*width: 1200px;*/
+				/*overflow: hidden;*/
+			}
+			
+			.title-pic ul {
+				/*width: 1200px;*/
+				margin-right: -33px;
+			}
+			
+			.title-pic li {
+				padding-bottom: 20px;
+				margin-right: 33px;
+			}
+			
+			.title-li-box {}
+			
+			.title-pic-box {
+				width: 378px;
+				height: 266px;
+				overflow: hidden;
+			}
+			
+			.title-pic-box img {
+				display: block;
+			}
+			
+			.title-li-txt {
+				padding: 23px 15px;
+			}
+			
+			.title-big {
+				color: #fff;
+				font-size: 16px;
+			}
+			
+			.title-small {
+				color: #636363;
+				font-size: 14px;
+				padding-top: 16px;
+			}
+			
+			.title-pic-bg {
+				position: absolute;
+				top: 130px;
+				left: 10px;
+				width: 358px;
+				height: 2px;
+				background: rgba(0, 0, 0, 0.3);
+				opacity: 0;
+			}
+			
+			.title-pic-top {
+				position: absolute;
+				top: 6px;
+				left: 186px;
+				height: 4px;
+				width: 2px;
+				background-color: #E3120B;
+				opacity: 0;
+			}
+			
+			.title-pic-bottom {
+				position: absolute;
+				top: 252px;
+				left: 186px;
+				height: 4px;
+				width: 2px;
+				background-color: #E3120B;
+				opacity: 0;
+			}
+			
+			.title-pic-left {
+				position: absolute;
+				left: 6px;
+				width: 4px;
+				height: 2px;
+				top: 132px;
+				background-color: #E3120B;
+				opacity: 0;
+			}
+			
+			.title-pic-right {
+				position: absolute;
+				right: 6px;
+				width: 4px;
+				height: 2px;
+				top: 132px;
+				background-color: #E3120B;
+				opacity: 0;
+			}
+			
+			.title-pic-add {
+				position: absolute;
+				top: 50px;
+				left: 168px;
+				width: 30px;
+				height: 30px;
+				border: 2px solid #FFFFFF;
+				border-radius: 100%;
+				text-align: center;
+				opacity: 0;
+			}
+			
+			.title-pic-add span {
+				display: inline-block;
+				font-size: 30px;
+				color: #FFFFFF;
+			}
+			
+			.title-pic li:hover .title-pic-top {
+				opacity: 1;
+				left: 6px;
+				width: 362px;
+			}
+			
+			.title-pic li:hover .title-pic-bottom {
+				opacity: 1;
+				left: 6px;
+				width: 362px;
+			}
+			
+			.title-pic li:hover .title-pic-left {
+				opacity: 1;
+				top: 6px;
+				height: 246px;
+			}
+			
+			.title-pic li:hover .title-pic-right {
+				opacity: 1;
+				top: 6px;
+				height: 250px;
+			}
+			
+			.title-pic li:hover .title-pic-bg {
+				opacity: 1;
+				top: 10px;
+				width: 358px;
+				height: 246px;
+			}
+			
+			.title-pic li:hover .title-pic-add {
+				opacity: 1;
+				top: 100px;
+			}
+			
+			.title-pic li:hover .title-pic li:hover {
+				/*box-shadow: 0 0 40px rgba(0, 0, 0, .5)*/
+				box-shadow: 0 0 60px -10px rgba(0, 0, 0, .5);
+			}
+			
+			.title-pic li:hover .title-pic-box img {
+				-webkit-transform: scale(1.08);
+				-ms-transform: scale(1.08);
+				transform: scale(1.08)
+			}
+			
+			.title-pic li:hover .title-li-txt {
+				background-color: #E3120B;
+				/*box-shadow: 0, 2px 0 rgba(0, 0, 0, .2);*/
+				box-shadow: 0 0 60px -10px rgba(0, 0, 0, .5);
+			}
+			
+			.title-pic li:hover .title-li-txt p {
+				-webkit-transform: translateX(10px);
+				-moz-transform: translateX(10px);
+				-ms-transform: translateX(10px);
+				-o-transform: translateX(10px);
+				transform: translateX(10px);
+			}
+			
+			.title-pic li:hover .title-small {
+				color: rgba(255, 255, 255, 0.6);
+			}
+			
+			.page {
+				color: #e3120b;
+			}
+			
+			.bottom {
+				padding: 100px 0 10px 0;
+				color: #999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--标题头部-->
+		<div class="fix-bg">
+			<div class="fix-big container clearfix">
+				<div class="fix-logo fl ">
+					<a href="index.html">
+						<img src="img/first/logo.png" />
+					</a>
+				</div>
+				<div class="fix-box fr relative">
+					<ul class="clearfix">
+						<li class="fl fix-li">
+							<a href="index.html" >首页</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="Case demonstration.html" class="fix-red">案例展示</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="Sconpe of business.html">业务范围</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="news.html">新闻中心</a>
+						</li>
+						<li class="fl relative gy fix-li">
+							<a href="">关于<i class="fa fa-angle-down"></i></a>
+							<ul class="list">
+								<li class="list-li">
+									<a href="About us.html" class="list-li-a">关于我们</a>
+								</li>
+								<li class="list-li">
+									<a href="About us.html" class="list-li-a">公司奖励</a>
+								</li>
+								<li class="list-li">
+									<a href="Core team.html" class="list-li-a">核心团队</a>
+								</li>
+								<li class="list-li">
+									<a href="Core team.html" class="list-li-a">发展经历</a>
+								</li>
+							</ul>
+						</li>
+						<li class="fl fix-li">
+							<a href="Cooperative partner.html">合作伙伴</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="contact.html">联系</a>
+						</li>
+					</ul>
+					<div class="fix-line trans5">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-bg" id="top">
+
+			<div class="top">
+
+			</div>
+			<div class="top-pic-box">
+				<div class="top-pic-box1">
+
+					<div class="top-pic">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--标题-->
+		<div class="title-bg relative">
+			<div class="container">
+				<div class="title-box clearfix">
+					<div class="title-left fl wow fadeInUp">
+						<a class="red">全部</a>
+						<a>电子3C类</a>
+						<a>加工制造</a>
+						<a>设备类</a>
+					</div>
+					<div class="title-right fr wow fadeInUp">
+						<span>您的位置：</span>
+						<a href="index.html">首页</a>
+						<span>></span>
+						<a href="Case demonstration.html"> 案例展示</a>
+					</div>
+				</div>
+				<div class="title-pic">
+					<ul class="clearfix">
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-1.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">智能机器人领域的推动者</p>
+										<p class="title-small trans5">产品设计</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-2.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">360° Business Innovation</p>
+										<p class="title-small trans5">Ardmore Residence / UNStudio</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-3.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">同声 “云罐”家庭智能终端</p>
+										<p class="title-small trans5">Network and information </p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-4.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">新场景下的沟通变革</p>
+										<p class="title-small trans5">HARVEST STATES</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-5.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">守护音乐梦想高贵卫士</p>
+										<p class="title-small trans5">物产CSR</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-6.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">终端类产品的全新突破</p>
+										<p class="title-small trans5">Ardmore Residence / UNStudio</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-7.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">智慧降温，畅享人生</p>
+										<p class="title-small trans5">Business Innovation</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-8.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">商业广告位|益美新广告箱</p>
+										<p class="title-small trans5">Commercial compressor</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-9.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">Danfoss Silicon Power IGBT 模块和模组</p>
+										<p class="title-small trans5">材料和生产技术</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-10.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">全球首款智能听诊器</p>
+										<p class="title-small trans5">商业解决方案</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-11.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">开启健康生活|江航1L制氧机</p>
+										<p class="title-small trans5">Metal money clip</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-li-box">
+									<div class="title-pic-box">
+										<img src="img/two/1-12.jpg" width="378px" height="266px" class="trans5" />
+									</div>
+									<div class="title-li-txt trans5">
+										<p class="title-big trans5">Cubitron™ II 系列研磨产品</p>
+										<p class="title-small trans5">SICBO Slide Black-123</p>
+
+									</div>
+								</div>
+								<div class="title-pic-bg trans5">
+
+								</div>
+								<div class="title-pic-add trans5">
+									<span>+</span>
+								</div>
+								<span class="title-pic-top trans5"></span>
+								<span class="title-pic-bottom trans5"></span>
+								<span class="title-pic-left trans5"></span>
+								<span class="title-pic-right trans5"></span>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="page">
+					1
+				</div>
+				<div class="bottom">
+					COPYRIGHT (©) 2017 mo005_3428 - 电子产品类模板.
+				</div>
+			</div>
+		</div>
+		<!--侧边栏-->
+		<div class="right-box">
+			<div class="right-wechat">
+				<a href="#">
+					<i class="fa fa-comments-o"></i>
+				</a>
+			</div>
+			<div class="right-blog">
+				<a href="#">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</div>
+			<div class="right-phone">
+				<a href="#">
+					<i class="fa fa-mobile"></i>
+				</a>
+			</div>
+			<div class="right-return">
+				<a href="#top" class="trans5">
+					<i class="fa fa-angle-up"></i>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var wow = new WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: true,
+			live: true
+		});
+		wow.init();
+	</script>
+	<script type="text/javascript">
+		//头部隐藏出现
+		$(document).ready(function() {
+			var sum = 0;
+
+			$(".gy").hover(function() {
+				$(this).find("ul").stop(true).slideDown("slow");
+			}, function() {
+				$(this).find("ul").stop(true).slideUp("slow");
+			})
+			//字体下面红线
+			var arr = [];
+			$(".fix-li").each(function(i) {
+				arr.push($(this).innerWidth());
+
+			})
+			var sum = 0;
+
+			function a(t) {
+				sum = 0;
+				for(var i = 0; i < t; i++) {
+					sum += arr[i];
+				}
+			}
+			$(".fix-li").hover(function() {
+				var topindex = $(this).index();
+				a(topindex);
+				if($(this).index() == 4) {
+					$(".fix-line").css({
+						width: $(this).find("ul li").outerWidth(),
+						left: sum
+					})
+				} else {
+					$(".fix-line").css({
+						width: $(this).outerWidth(),
+						left: sum
+					})
+				}
+
+			}, function() {
+				$(".fix-line").css({
+					width: '112px',
+					left: '84px'
+				})
+			});
+			//返回顶部
+			$(".right-return").click(function() {
+				$(".banner-cp").css('top', 0);
+				$('html, body').animate({
+					scrollTop: 0
+				}, 2000);
+			})
+			$(window).scroll(function() {
+				var distance = parseInt($(window).scrollTop());
+				if(distance > 100) {
+					$(".right-return").css("opacity", 1);
+				} else {
+					$(".right-return").css("opacity", 0);
+				}
+				if(distance > 0) {
+					$(".top-pic-box").css('top', -parseInt(distance / 4) + 'px');
+					//					$(".top").css("height", 60 + parseInt(distance / 2) + 'px');
+				} else if(distance < 1) {
+					$(".top-pic-box").css('top', '0px');
+					$(".top").css("height", 60 + 'px');
+				}
+			});
+		});
+	</script>
+
+</html>

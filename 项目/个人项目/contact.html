@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<style type="text/css">
+			html,
+			body {
+				font-family: "微软雅黑";
+				font-size: 12px;
+			}
+			
+			.container {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.clearfix:after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+			
+			.relative {
+				position: relative;
+			}
+			
+			.trans5 {
+				-webkit-transition: all 0.5s ease-in-out;
+				-moz-transition: all 0.5s ease-in-out;
+				-ms-transition: all 0.5s ease-in-out;
+				-o-transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;
+				: ;
+			}
+			
+			.fix-bg {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 60px;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 100;
+			}
+			
+			.fix-big .fix-box ul .fix-red {
+				color: #e3120b;
+			}
+			
+			.fix-logo {
+				width: 150px;
+				height: 50px;
+				padding: 4px 0 6px 0;
+			}
+			
+			.fix-box {
+				margin-right: 20px;
+			}
+			
+			.fix-box ul {}
+			
+			.fix-box li {
+				padding: 18px 28px;
+				color: #fff;
+			}
+			
+			.fix-box li a {
+				color: #FFFFFF;
+				font-size: 14px;
+			}
+			
+			.fix-box li a:hover {
+				color: #e3120b;
+			}
+			
+			.fix-box ul li .list {
+				position: absolute;
+				top: 60px;
+				left: 0;
+				background-color: #222;
+				z-index: 5;
+				width: 140px;
+				display: none;
+			}
+			
+			.fix-box ul li .list .list-li {
+				/*width: 100%;*/
+			}
+			
+			.fix-box ul li .list .list-li .list-li-a {
+				font-weight: 500;
+				padding: 12px 10px;
+				transition: all .2s ease-in-out;
+				color: #fff;
+			}
+			
+			.fix-box ul li .list .list-li:hover {
+				background-color: #E3120B;
+			}
+			
+			.fix-line {
+				position: absolute;
+				bottom: 0;
+				left: 616px;
+				width: 84px;
+				background-color: #E3120B;
+				height: 2px;
+				z-index: 5;
+				opacity: 1;
+			}
+			/*侧边栏*/
+			
+			.right-box {
+				position: fixed;
+				right: 7px;
+				bottom: 63px;
+				z-index: 99;
+				height: 124px;
+				/*background-color: red;*/
+			}
+			
+			.right-wechat {
+				background-color: #e3120b;
+				border: 1px solid #e3120b;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 186px;
+				z-index: 99;
+				font-size: 18px;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			.right-wechat i {
+				color: #fff;
+				margin-top: 9px;
+			}
+			
+			.right-blog {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 146px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+			}
+			
+			.right-box i {
+				font-size: 22px;
+				margin-top: 9px;
+				margin-top: 9px;
+			}
+			
+			.right-phone {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 106px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+			}
+			
+			.right-return {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 66px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+				opacity: 0;
+			}
+			
+			.right-box .right-wechat:hover i {
+				color: #FFFFFF;
+			}
+			
+			.right-box a:hover i {
+				color: #E3120B;
+			}
+			
+			.top-bg {
+				background-color: #303030;
+				width: 100%;
+				height: 360px;
+			}
+			
+			.top {
+				background-color: #303030;
+				height: 60px;
+				width: 100%;
+			}
+			
+			.top-pic-box1 {
+				position: fixed;
+				width: 100%;
+			}
+			
+			.top-pic-box {
+				position: relative;
+				height: 300px;
+				top: 0px;
+			}
+			
+			.top-pic {
+				background: url(img/contact/top.jpg) top center no-repeat;
+				width: 100%;
+				height: 300px;
+			}
+			
+			.txt-bg {
+				background-color: #252525;
+			}
+			
+			.txt-title {
+				padding: 80px 0;
+				text-align: center;
+				border-bottom: 1px dotted #d3d3d3;
+			}
+			
+			.txt-title-big {
+				color: #e3120b;
+				font-size: 22px;
+			}
+			
+			.txt-title-small {
+				font-size: 14px;
+				color: #636363;
+			}
+			
+			.txt-box {
+				padding-top: 40px;
+			}
+			
+			.txt-box-txt {
+				height: 200px;
+				width: 400px;
+			}
+			
+			.txt-one {
+				font-size: 16px;
+				color: rgb(127, 127, 127);
+				padding-bottom: 3px;
+			}
+			
+			.txt-two {
+				font-size: 12px;
+				color: rgb(191, 191, 191);
+				padding-bottom: 20px;
+			}
+			
+			.txt-three {
+				color: #999;
+				font-size: 13px;
+				padding-bottom: 2px;
+			}
+			
+			.bottom {
+				padding: 100px 0 10px 0;
+				color: #999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--标题头部-->
+		<div class="fix-bg">
+			<div class="fix-big container clearfix">
+				<div class="fix-logo fl ">
+					<a href="index.html">
+						<img src="img/first/logo.png" />
+					</a>
+				</div>
+				<div class="fix-box fr relative">
+					<ul class="clearfix">
+						<li class="fl fix-li">
+							<a href="index.html">首页</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="Case demonstration.html">案例展示</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="Sconpe of business.html">业务范围</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="news.html">新闻中心</a>
+						</li>
+						<li class="fl relative gy fix-li">
+							<a href="">关于<i class="fa fa-angle-down"></i></a>
+							<ul class="list">
+								<li class="list-li">
+									<a href="About us.html" class="list-li-a">关于我们</a>
+								</li>
+								<li class="list-li">
+									<a href="About us.html" class="list-li-a">公司奖励</a>
+								</li>
+								<li class="list-li">
+									<a href="Core team.html" class="list-li-a">核心团队</a>
+								</li>
+								<li class="list-li">
+									<a href="Core team.html" class="list-li-a">发展经历</a>
+								</li>
+							</ul>
+						</li>
+						<li class="fl fix-li">
+							<a href="Cooperative partner.html">合作伙伴</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="contact.html" class="fix-red">联系</a>
+						</li>
+					</ul>
+					<div class="fix-line trans5">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-bg" id="top">
+
+			<div class="top">
+
+			</div>
+			<div class="top-pic-box">
+				<div class="top-pic-box1">
+
+					<div class="top-pic">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--标题-->
+		<div class="txt-bg relative">
+			<div class="container">
+
+				<div class="txt-title wow fadeInUp">
+					<p class="txt-title-big">联系</p>
+					<p class="txt-title-small">Contact</p>
+
+				</div>
+				<div class="txt-box clearfix">
+					<div class="txt-box-txt fl wow fadeInUp">
+						<p class="txt-one">网站建设文化传播有限公司</p>
+						<p class="txt-two">Beijing WEBSITE Culture Communication Co. Ltd.</p>
+						<p class="txt-three">总部地址：北京市朝阳区世贸商务楼2688室</p>
+						<p class="txt-three">总部电话：+86 10 69887650</p>
+						<p class="txt-three">电子邮箱：website@webs.com</p>
+						<p class="txt-three">邮政编码：100024</p>
+						<p class="txt-three">https://www.baidu.com/</p>
+					</div>
+					<div class="txt-box-txt fl wow fadeInUp">
+						<p class="txt-one">网站建设文化传播有限公司</p>
+						<p class="txt-two">Beijing WEBSITE Culture Communication Co. Ltd.</p>
+						<p class="txt-three">总部地址：北京市朝阳区世贸商务楼2688室</p>
+						<p class="txt-three">总部电话：+86 10 69887650</p>
+						<p class="txt-three">电子邮箱：website@webs.com</p>
+						<p class="txt-three">邮政编码：100024</p>
+						<p class="txt-three">https://www.baidu.com/</p>
+					</div>
+					<div class="txt-box-txt fl wow fadeInUp">
+						<p class="txt-one">网站建设文化传播有限公司</p>
+						<p class="txt-two">Beijing WEBSITE Culture Communication Co. Ltd.</p>
+						<p class="txt-three">总部地址：北京市朝阳区世贸商务楼2688室</p>
+						<p class="txt-three">总部电话：+86 10 69887650</p>
+						<p class="txt-three">电子邮箱：website@webs.com</p>
+						<p class="txt-three">邮政编码：100024</p>
+						<p class="txt-three">https://www.baidu.com/</p>
+					</div>
+				</div>
+				<div class="bottom">
+					COPYRIGHT (©) 2017 mo005_3428 - 电子产品类模板.
+				</div>
+			</div>
+		</div>
+		<!--侧边栏-->
+		<div class="right-box">
+			<div class="right-wechat">
+				<a href="#">
+					<i class="fa fa-comments-o"></i>
+				</a>
+			</div>
+			<div class="right-blog">
+				<a href="#">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</div>
+			<div class="right-phone">
+				<a href="#">
+					<i class="fa fa-mobile"></i>
+				</a>
+			</div>
+			<div class="right-return">
+				<a href="#top" class="trans5">
+					<i class="fa fa-angle-up"></i>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var wow = new WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: true,
+			live: true
+		});
+		wow.init();
+	</script>
+	<script type="text/javascript">
+		//头部隐藏出现
+		$(document).ready(function() {
+			var sum = 0;
+
+			$(".gy").hover(function() {
+				$(this).find("ul").stop(true).slideDown("slow");
+			}, function() {
+				$(this).find("ul").stop(true).slideUp("slow");
+			})
+			//字体下面红线
+			var arr = [];
+			$(".fix-li").each(function(i) {
+				arr.push($(this).innerWidth());
+
+			})
+			var sum = 0;
+
+			function a(t) {
+				sum = 0;
+				for(var i = 0; i < t; i++) {
+					sum += arr[i];
+				}
+			}
+			$(".fix-li").hover(function() {
+				var topindex = $(this).index();
+				a(topindex);
+				if($(this).index() == 4) {
+					$(".fix-line").css({
+						width: $(this).find("ul li").outerWidth(),
+						left: sum
+					})
+				} else {
+					$(".fix-line").css({
+						width: $(this).outerWidth(),
+						left: sum
+					})
+				}
+
+			}, function() {
+				$(".fix-line").css({
+					width: '84px',
+					left: '616px'
+				})
+			});
+			//返回顶部
+			$(".right-return").click(function() {
+				$(".banner-cp").css('top', 0);
+				$('html, body').animate({
+					scrollTop: 0
+				}, 2000);
+			})
+			$(window).scroll(function() {
+				var distance = parseInt($(window).scrollTop());
+				if(distance > 100) {
+					$(".right-return").css("opacity", 1);
+				} else {
+					$(".right-return").css("opacity", 0);
+				}
+				if(distance > 0) {
+					$(".top-pic-box").css('top', -parseInt(distance / 4) + 'px');
+					//					$(".top").css("height", 60 + parseInt(distance / 2) + 'px');
+				} else if(distance < 1) {
+					$(".top-pic-box").css('top', '0px');
+					$(".top").css("height", 60 + 'px');
+				}
+			});
+		});
+	</script>
+
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<style type="text/css">
+			html,
+			body {
+				font-family: "微软雅黑";
+				font-size: 12px;
+			}
+			
+			.container {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.clearfix:after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+			
+			.relative {
+				position: relative;
+			}
+			
+			.trans5 {
+				-webkit-transition: all 0.5s ease-in-out;
+				-moz-transition: all 0.5s ease-in-out;
+				-ms-transition: all 0.5s ease-in-out;
+				-o-transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;
+				: ;
+			}
+			
+			.fix-bg {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 60px;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 100;
+			}
+			
+			.fix-big .fix-box ul .fix-red {
+				color: #e3120b;
+			}
+			
+			.fix-logo {
+				width: 150px;
+				height: 50px;
+				padding: 4px 0 6px 0;
+			}
+			
+			.fix-box {
+				margin-right: 20px;
+			}
+			
+			.fix-box ul {}
+			
+			.fix-box li {
+				padding: 18px 28px;
+				color: #fff;
+			}
+			
+			.fix-box li a {
+				color: #FFFFFF;
+				font-size: 14px;
+			}
+			
+			.fix-box li a:hover {
+				color: #e3120b;
+			}
+			
+			.fix-box ul li .list {
+				position: absolute;
+				top: 60px;
+				left: 0;
+				background-color: #222;
+				z-index: 5;
+				width: 140px;
+				display: none;
+			}
+			
+			.fix-box ul li .list .list-li {
+				/*width: 100%;*/
+			}
+			
+			.fix-box ul li .list .list-li .list-li-a {
+				font-weight: 500;
+				padding: 12px 10px;
+				transition: all .2s ease-in-out;
+				color: #fff;
+			}
+			
+			.fix-box ul li .list .list-li:hover {
+				background-color: #E3120B;
+			}
+			
+			.fix-line {
+				position: absolute;
+				bottom: 0;
+				left: 504px;
+				width: 112px;
+				background-color: #E3120B;
+				height: 2px;
+				z-index: 5;
+				opacity: 1;
+			}
+			/*侧边栏*/
+			
+			.right-box {
+				position: fixed;
+				right: 7px;
+				bottom: 63px;
+				z-index: 99;
+				height: 124px;
+				/*background-color: red;*/
+			}
+			
+			.right-wechat {
+				background-color: #e3120b;
+				border: 1px solid #e3120b;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 186px;
+				z-index: 99;
+				font-size: 18px;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			.right-wechat i {
+				color: #fff;
+				margin-top: 9px;
+			}
+			
+			.right-blog {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 146px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+			}
+			
+			.right-box i {
+				font-size: 22px;
+				margin-top: 9px;
+				margin-top: 9px;
+			}
+			
+			.right-phone {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 106px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+			}
+			
+			.right-return {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 66px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+				opacity: 0;
+			}
+			
+			.right-box .right-wechat:hover i {
+				color: #FFFFFF;
+			}
+			
+			.right-box a:hover i {
+				color: #E3120B;
+			}
+			
+			.top-bg {
+				background-color: #303030;
+				width: 100%;
+				height: 360px;
+			}
+			
+			.top {
+				background-color: #303030;
+				height: 60px;
+				width: 100%;
+			}
+			
+			.top-pic-box1 {
+				position: fixed;
+				width: 100%;
+			}
+			
+			.top-pic-box {
+				position: relative;
+				height: 300px;
+				top: 0px;
+			}
+			
+			.top-pic {
+				background: url(img/CooperativePartner/top.jpg) top center no-repeat;
+				width: 100%;
+				height: 300px;
+			}
+			
+			.title-bg {
+				background-color: #252525;
+			}
+			
+			.title-box {
+				margin: 20px 0;
+			}
+			
+			.title-left a {
+				font-size: 13px;
+				color: #737373;
+				padding: 8px 20px;
+				margin-right: 5px;
+			}
+			
+			.title-left .red {
+				background-color: #e3120b;
+				color: #FFFFFF;
+			}
+			
+			.title-left a:hover {
+				background-color: #e3120b;
+				color: #FFFFFF;
+			}
+			
+			.title-right {
+				color: #999;
+			}
+			
+			.title-right a:hover {
+				color: #E3120B;
+			}
+			
+			.title-pic {
+				padding-top: 40px;
+				padding-bottom: 20px;
+				/*width: 1200px;*/
+				/*overflow: hidden;*/
+			}
+			
+			.title-pic li {
+				padding-bottom: 16px;
+				margin-right: 16px;
+			}
+			
+			.title-pic-img {
+				width: 282px;
+				height: 128px;
+				border: 1px solid rgba(255, 255, 255, .05);
+			}
+			
+			.page {
+				color: #e3120b;
+			}
+			
+			.bottom {
+				padding: 100px 0 10px 0;
+				color: #999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--标题头部-->
+		<div class="fix-bg">
+			<div class="fix-big container clearfix">
+				<div class="fix-logo fl ">
+					<a href="index.html">
+						<img src="img/first/logo.png" />
+					</a>
+				</div>
+				<div class="fix-box fr relative">
+					<ul class="clearfix">
+						<li class="fl fix-li">
+							<a href="index.html" >首页</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="Case demonstration.html">案例展示</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="Sconpe of business.html">业务范围</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="news.html">新闻中心</a>
+						</li>
+						<li class="fl relative gy fix-li">
+							<a href="">关于<i class="fa fa-angle-down"></i></a>
+							<ul class="list">
+								<li class="list-li">
+									<a href="About us.html" class="list-li-a">关于我们</a>
+								</li>
+								<li class="list-li">
+									<a href="About us.html" class="list-li-a">公司奖励</a>
+								</li>
+								<li class="list-li">
+									<a href="Core team.html" class="list-li-a">核心团队</a>
+								</li>
+								<li class="list-li">
+									<a href="Core team.html" class="list-li-a">发展经历</a>
+								</li>
+							</ul>
+						</li>
+						<li class="fl fix-li">
+							<a href="Cooperative partner.html" class="fix-red">合作伙伴</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="contact.html">联系</a>
+						</li>
+					</ul>
+					<div class="fix-line trans5">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-bg" id="top">
+
+			<div class="top">
+
+			</div>
+			<div class="top-pic-box">
+				<div class="top-pic-box1">
+
+					<div class="top-pic">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--标题-->
+		<div class="title-bg relative">
+			<div class="container">
+				<div class="title-box clearfix">
+					<div class="title-left fl wow fadeInUp">
+						<a class="red">全部</a>
+						<a>电子3C类</a>
+						<a>加工制造</a>
+						<a>设备类</a>
+					</div>
+					<div class="title-right fr wow fadeInUp">
+						<span>您的位置：</span>
+						<a href="index.html">首页</a>
+						<span>></span>
+						<a href="Sconpe of business.html"> 案例展示</a>
+					</div>
+				</div>
+				<div class="title-pic">
+					<ul class="clearfix">
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-pic-img">
+									<img src="img/CooperativePartner/1-1.png" width="282px" height="128px" />
+
+								</div>
+
+							</a>
+						</li>
+
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-pic-img">
+									<img src="img/CooperativePartner/1-2.png" width="282px" height="128px" />
+
+								</div>
+
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-pic-img">
+									<img src="img/CooperativePartner/1-3.png" width="282px" height="128px" />
+
+								</div>
+
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-pic-img">
+									<img src="img/CooperativePartner/1-4.png" width="282px" height="128px" />
+
+								</div>
+
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-pic-img">
+									<img src="img/CooperativePartner/1-5.png" width="282px" height="128px" />
+
+								</div>
+
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-pic-img">
+									<img src="img/CooperativePartner/1-6.png" width="282px" height="128px" />
+
+								</div>
+
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-pic-img">
+									<img src="img/CooperativePartner/1-7.png" width="282px" height="128px" />
+
+								</div>
+
+							</a>
+						</li>
+						<li class="fl relative wow fadeInUp">
+							<a href="#">
+								<div class="title-pic-img">
+									<img src="img/CooperativePartner/1-8.png" width="282px" height="128px" />
+
+								</div>
+
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="page">
+					1
+				</div>
+				<div class="bottom">
+					COPYRIGHT (©) 2017 mo005_3428 - 电子产品类模板.
+				</div>
+			</div>
+		</div>
+		<!--侧边栏-->
+		<div class="right-box">
+			<div class="right-wechat">
+				<a href="#">
+					<i class="fa fa-comments-o"></i>
+				</a>
+			</div>
+			<div class="right-blog">
+				<a href="#">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</div>
+			<div class="right-phone">
+				<a href="#">
+					<i class="fa fa-mobile"></i>
+				</a>
+			</div>
+			<div class="right-return">
+				<a href="#top" class="trans5">
+					<i class="fa fa-angle-up"></i>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var wow = new WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: true,
+			live: true
+		});
+		wow.init();
+	</script>
+	<script type="text/javascript">
+		//头部隐藏出现
+		$(document).ready(function() {
+			var sum = 0;
+
+			$(".gy").hover(function() {
+				$(this).find("ul").stop(true).slideDown("slow");
+			}, function() {
+				$(this).find("ul").stop(true).slideUp("slow");
+			})
+			//字体下面红线
+			var arr = [];
+			$(".fix-li").each(function(i) {
+				arr.push($(this).innerWidth());
+
+			})
+			var sum = 0;
+
+			function a(t) {
+				sum = 0;
+				for(var i = 0; i < t; i++) {
+					sum += arr[i];
+				}
+			}
+			$(".fix-li").hover(function() {
+				var topindex = $(this).index();
+				a(topindex);
+				if($(this).index() == 4) {
+					$(".fix-line").css({
+						width: $(this).find("ul li").outerWidth(),
+						left: sum
+					})
+				} else {
+					$(".fix-line").css({
+						width: $(this).outerWidth(),
+						left: sum
+					})
+				}
+
+			}, function() {
+				$(".fix-line").css({
+					width: '112px',
+					left: '504px'
+				})
+			});
+			//返回顶部
+			$(".right-return").click(function() {
+				$(".banner-cp").css('top', 0);
+				$('html, body').animate({
+					scrollTop: 0
+				}, 2000);
+			})
+			$(window).scroll(function() {
+				var distance = parseInt($(window).scrollTop());
+				if(distance > 100) {
+					$(".right-return").css("opacity", 1);
+				} else {
+					$(".right-return").css("opacity", 0);
+				}
+				if(distance > 0) {
+					$(".top-pic-box").css('top', -parseInt(distance / 4) + 'px');
+					//					$(".top").css("height", 60 + parseInt(distance / 2) + 'px');
+				} else if(distance < 1) {
+					$(".top-pic-box").css('top', '0px');
+					$(".top").css("height", 60 + 'px');
+				}
+			});
+		});
+	</script>
+
+</html>

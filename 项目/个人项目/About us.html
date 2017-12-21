@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<style type="text/css">
+			html,
+			body {
+				font-family: "微软雅黑";
+				font-size: 12px;
+			}
+			
+			.container {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.clearfix:after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+			
+			.relative {
+				position: relative;
+			}
+			
+			.trans5 {
+				-webkit-transition: all 0.5s ease-in-out;
+				-moz-transition: all 0.5s ease-in-out;
+				-ms-transition: all 0.5s ease-in-out;
+				-o-transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;
+			}
+			
+			.fix-bg {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 60px;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 100;
+			}
+			
+			.fix-big .fix-box ul .fix-red {
+				color: #e3120b;
+			}
+			
+			.fix-logo {
+				width: 150px;
+				height: 50px;
+				padding: 4px 0 6px 0;
+			}
+			
+			.fix-box {
+				margin-right: 20px;
+			}
+			
+			.fix-box ul {}
+			
+			.fix-box li {
+				padding: 18px 28px;
+				color: #fff;
+			}
+			
+			.fix-box li a {
+				color: #FFFFFF;
+				font-size: 14px;
+			}
+			
+			.fix-box li a:hover {
+				color: #e3120b;
+			}
+			
+			.fix-box ul li .list {
+				position: absolute;
+				top: 60px;
+				left: 0;
+				background-color: #222;
+				z-index: 5;
+				width: 140px;
+				display: none;
+			}
+			
+			.fix-box ul li .list .list-li {
+				/*width: 100%;*/
+			}
+			
+			.fix-box ul li .list .list-li .list-li-a {
+				font-weight: 500;
+				padding: 12px 10px;
+				transition: all .2s ease-in-out;
+				color: #fff;
+			}
+			
+			.fix-box ul li .list .list-li:hover {
+				background-color: #E3120B;
+			}
+			
+			.fix-line {
+				position: absolute;
+				bottom: 0;
+				left: 420px;
+				width: 140px;
+				background-color: #E3120B;
+				height: 2px;
+				z-index: 5;
+				opacity: 1;
+			}
+			/*侧边栏*/
+			
+			.right-box {
+				position: fixed;
+				right: 7px;
+				bottom: 63px;
+				z-index: 99;
+				height: 124px;
+				/*background-color: red;*/
+			}
+			
+			.right-wechat {
+				background-color: #e3120b;
+				border: 1px solid #e3120b;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 186px;
+				z-index: 99;
+				font-size: 18px;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			.right-wechat i {
+				color: #fff;
+				margin-top: 9px;
+			}
+			
+			.right-blog {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 146px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+			}
+			
+			.right-box i {
+				font-size: 22px;
+				margin-top: 9px;
+				margin-top: 9px;
+			}
+			
+			.right-phone {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 106px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+			}
+			
+			.right-return {
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				position: fixed;
+				right: 0px;
+				bottom: 66px;
+				background: #202020;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				text-align: center;
+				opacity: 0;
+			}
+			
+			.right-box .right-wechat:hover i {
+				color: #FFFFFF;
+			}
+			
+			.right-box a:hover i {
+				color: #E3120B;
+			}
+			
+			.top-bg {
+				background-color: #303030;
+				width: 100%;
+				height: 360px;
+			}
+			
+			.top {
+				background-color: #303030;
+				height: 60px;
+				width: 100%;
+			}
+			
+			.top-pic-box1 {
+				position: fixed;
+				width: 100%;
+			}
+			
+			.top-pic-box {
+				position: relative;
+				height: 300px;
+				top: 0px;
+			}
+			
+			.top-pic {
+				background: url(img/two/top-1.jpg) top center no-repeat;
+				width: 100%;
+				height: 300px;
+			}
+			
+			.title-bg {
+				background-color: #252525;
+			}
+			
+			.title {
+				padding: 80px 0 60px 0;
+				text-align: center;
+			}
+			
+			.title-big {
+				color: #e3120b;
+				font-size: 22px;
+			}
+			
+			.title-small {
+				font-size: 14px;
+				color: #636363;
+			}
+			
+			.floor1-box {
+				padding-bottom: 40px;
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.15);
+			}
+			
+			.floor1-pic {
+				width: 450px;
+				height: 396px;
+			}
+			
+			.floor1-txt {
+				padding-left: 40px;
+				color: #999;
+				font-size: 13px;
+				width: 600px;
+			}
+			
+			.floor1-one {
+				padding-bottom: 30px;
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.15);
+				text-align: left;
+			}
+			
+			.floor1-two {
+				font-size: 16px;
+				padding: 10px 0 24px 0;
+			}
+			
+			.floor1-three {
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.15);
+				padding-bottom: 30px;
+			}
+			
+			.floor1-four {
+				padding-bottom: 30px;
+				padding-top: 35px;
+			}
+			
+			.floor2-box {
+				padding-top: 30px;
+			}
+			
+			.floor2-title-big {
+				font-size: 20px;
+				color: rgb(216, 216, 216);
+				padding-bottom: 30px;
+			}
+			
+			.floor2-title-small {
+				color: #999;
+				font-size: 13px;
+				padding-bottom: 50px;
+			}
+			
+			.floor2-pic-box {
+				width: 350px;
+				margin-right: 50px;
+			}
+			
+			.floor2-pic {
+				width: 350px;
+				height: 233px;
+				overflow: hidden;
+			}
+			
+			.floor2-pic-txt {
+				padding: 30px 0;
+			}
+			
+			.bottom {
+				padding: 100px 0 10px 0;
+				color: #999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--标题头部-->
+		<div class="fix-bg">
+			<div class="fix-big container clearfix">
+				<div class="fix-logo fl ">
+					<a href="index.html">
+						<img src="img/first/logo.png" />
+					</a>
+				</div>
+				<div class="fix-box fr relative">
+					<ul class="clearfix">
+						<li class="fl fix-li">
+							<a href="index.html">首页</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="Case demonstration.html">案例展示</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="Sconpe of business.html">业务范围</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="news.html">新闻中心</a>
+						</li>
+						<li class="fl relative gy fix-li">
+							<a href="">关于<i class="fa fa-angle-down" class="fix-red"></i></a>
+							<ul class="list">
+								<li class="list-li">
+									<a href="About us.html" class="list-li-a">关于我们</a>
+								</li>
+								<li class="list-li">
+									<a href="About us.html" class="list-li-a">公司奖励</a>
+								</li>
+								<li class="list-li">
+									<a href="Core team.html" class="list-li-a">核心团队</a>
+								</li>
+								<li class="list-li">
+									<a href="Core team.html" class="list-li-a">发展经历</a>
+								</li>
+							</ul>
+						</li>
+						<li class="fl fix-li">
+							<a href="Cooperative partner.html">合作伙伴</a>
+						</li>
+						<li class="fl fix-li">
+							<a href="contact.html">联系</a>
+						</li>
+					</ul>
+					<div class="fix-line trans5">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-bg" id="top">
+
+			<div class="top">
+
+			</div>
+			<div class="top-pic-box">
+				<div class="top-pic-box1">
+
+					<div class="top-pic">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--标题-->
+		<div class="title-bg relative">
+			<div class="container">
+				<div class="title">
+					<p class="title-big">关于我们</p>
+					<p class="title-small">JSMO.CO</p>
+				</div>
+				<div class="floor1-box clearfix">
+					<div class="floor1-pic fl">
+						<img src="img/About us/1-1.jpg" width="450px" height="396px" />
+
+					</div>
+					<div class="floor1-txt fl">
+						<p class="floor1-one">
+							梦想，创造现实，果断的阐释了品牌创建的初衷，一切都因梦想而发生，无论是过程还是结果，都在依循梦想创造的规律，我们对于品牌策略、形象设计、商业空间到传播、公关、宣广；从概念到实现都保持着对这一理念的忠诚。</p>
+						<p class="floor1-two">社会公益</p>
+						<p class="floor1-three">同时，我们将专业与责任、创新与体验注入到梦想实现的进程当中，重新构建品牌价值趋势，影响和改善与我们共容的社会、环境、商业、人群
+						</p>
+						<p class="floor1-four">
+							从事与品牌和设计有关的工作决定了我们的思维与行事的方式，我们既要保留独立、个性、自由的思想，又要通过能被大众可接受的行为来传达我们与众不同的观念。所以，“思想独立，行为从众”，是传递品牌价值和个体价值的最好方式
+						</p>
+					</div>
+
+				</div>
+				<div class="floor2-box">
+					<div class="floor2-title">
+						<p class="floor2-title-big">科技改善生活</p>
+						<p class="floor2-title-small">
+							中国的努力得到了社会的广泛认可，获得了“大中华区最具领导力企业”“最受赞赏的在华外商投资企业”“亚洲最受尊敬公司二十强”等诸多荣誉，并多次入选“世界500强在华贡献排行榜”且名列前茅</p>
+					</div>
+					<div class=" clearfix">
+						<div class="fl  floor2-pic-box">
+							<div class="floor2-pic">
+								<img src="img/About us/1-2.jpg" width="350px" height="233px" />
+							</div>
+							<div class="floor2-pic-txt">
+								工业化的发展将今天的挑战转变为明天的成就。将水行业能源中和的技术已经成熟，丹麦有望在几年内实现这一目标
+							</div>
+						</div>
+						<div class="fl floor2-pic-box">
+							<div class="floor2-pic">
+								<img src="img/About us/1-3.jpg" width="350px" height="233px" />
+							</div>
+							<div class="floor2-pic-txt">
+								好消息是，在减少能源消耗的同时还能减少水资源的浪费，就像使用更节能的水分配系统自动帮助减少漏水
+							</div>
+						</div>
+						<div class="fl floor2-pic-box">
+
+							<div class="floor2-pic">
+								<img src="img/About us/1-4.jpg" width="350px" height="233px" />
+							</div>
+							<div class="floor2-pic-txt">
+								Danfoss 压力变送器可以帮助您保持对高要求工业过程的控制。 这些产品精度高、坚固耐用并且使用寿命长，即使在最恶劣的环境下
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					COPYRIGHT (©) 2017 mo005_3428 - 电子产品类模板.
+				</div>
+			</div>
+		</div>
+		<!--侧边栏-->
+		<div class="right-box">
+			<div class="right-wechat">
+				<a href="#">
+					<i class="fa fa-comments-o"></i>
+				</a>
+			</div>
+			<div class="right-blog">
+				<a href="#">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</div>
+			<div class="right-phone">
+				<a href="#">
+					<i class="fa fa-mobile"></i>
+				</a>
+			</div>
+			<div class="right-return">
+				<a href="#top" class="trans5">
+					<i class="fa fa-angle-up"></i>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var wow = new WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: true,
+			live: true
+		});
+		wow.init();
+	</script>
+	<script type="text/javascript">
+		//头部隐藏出现
+		$(document).ready(function() {
+			var sum = 0;
+
+			$(".gy").hover(function() {
+				$(this).find("ul").stop(true).slideDown("slow");
+			}, function() {
+				$(this).find("ul").stop(true).slideUp("slow");
+			})
+			//字体下面红线
+			var arr = [];
+			$(".fix-li").each(function(i) {
+				arr.push($(this).innerWidth());
+
+			})
+			var sum = 0;
+
+			function a(t) {
+				sum = 0;
+				for(var i = 0; i < t; i++) {
+					sum += arr[i];
+				}
+			}
+			$(".fix-li").hover(function() {
+				var topindex = $(this).index();
+				a(topindex);
+				if($(this).index() == 4) {
+					$(".fix-line").css({
+						width: $(this).find("ul li").outerWidth(),
+						left: sum
+					})
+				} else {
+					$(".fix-line").css({
+						width: $(this).outerWidth(),
+						left: sum
+					})
+				}
+
+			}, function() {
+				$(".fix-line").css({
+					width: '140px',
+					left: '420px'
+				})
+			});
+			//返回顶部
+			$(".right-return").click(function() {
+				$(".banner-cp").css('top', 0);
+				$('html, body').animate({
+					scrollTop: 0
+				}, 2000);
+			})
+			$(window).scroll(function() {
+				var distance = parseInt($(window).scrollTop());
+				if(distance > 100) {
+					$(".right-return").css("opacity", 1);
+				} else {
+					$(".right-return").css("opacity", 0);
+				}
+				if(distance > 0) {
+					$(".top-pic-box").css('top', -parseInt(distance / 4) + 'px');
+					//					$(".top").css("height", 60 + parseInt(distance / 2) + 'px');
+				} else if(distance < 1) {
+					$(".top-pic-box").css('top', '0px');
+					$(".top").css("height", 60 + 'px');
+				}
+			});
+		});
+	</script>
+
+</html>
