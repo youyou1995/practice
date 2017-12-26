@@ -1,0 +1,182 @@
+@charset "utf-8";
+body {
+	background-image: url(../img/bg.jpg);
+	background-position: center;
+	height: 100%;
+	background-repeat: repeat;
+}
+
+.trans3 {
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
+
+.trans5 {
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+}
+
+
+/*.middle {
+	width: 960px;
+	margin: 0 auto;
+}*/
+
+
+/*标题*/
+
+.box_title {
+	height: 29px;
+	border-bottom: solid 3px #ff666b;
+	/*margin-top: 20px;*/
+	margin-bottom: 10px;
+}
+
+.title {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 27px;
+	color: #34495e;
+}
+
+.more {
+	font-size: 14px;
+	line-height: 27px;
+	color: #34495e;
+}
+
+.more a:hover {
+	color: red;
+	/*text-decoration: none;*/
+}
+
+
+/*热卖专区盒子*/
+
+.hot_box {
+	margin-top: 10px;
+}
+
+.hot_box li {
+	border-radius: 1px;
+	width: 229px;
+	height: 280px;
+	margin-right: 9px;
+	border: 1px solid #eee;
+	margin-bottom: 10px;
+	background: #fff;
+}
+
+.red_num {
+	color: #ff666b;
+	font-style: normal;
+}
+
+.hot_box a:hover {
+	color: black;
+}
+
+.hot_box p {
+	padding: 0 20px;
+}
+
+.hot_box img {
+	display: block;
+	margin: 10px auto;
+}
+
+.infor {
+	height: 50px;
+	margin-bottom: 8px;
+	overflow: hidden;
+	font-size: 14px;
+}
+
+
+/*css3放大缩小*/
+
+.hot_box li:hover img {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+
+/*商品边框动画*/
+
+.line_top {
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	border-bottom: 2px solid orange;
+	z-index: 5;
+}
+
+.line_left {
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	border-left: 2px solid orange;
+}
+
+.line_right {
+	position: absolute;
+	top: 10px;
+	left: 225px;
+	border-left: 2px solid orange;
+}
+
+.line_bottom {
+	position: absolute;
+	top: 270px;
+	left: 5px;
+	border-bottom: 2px solid orange;
+}
+
+@keyframes myfirst {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 220px;
+	}
+}
+
+.hot_box li:hover .line_top {
+	animation: myfirst 1s 1;
+	animation-delay: 0s;
+}
+
+.hot_box li:hover .line_bottom {
+	animation: myfirst 1s 1;
+	animation-delay: 0s;
+	/*animation-direction: reverse;*/
+}
+
+@keyframes mysecond {
+	from {
+		height: 0px;
+	}
+	to {
+		height: 260px;
+	}
+}
+
+.hot_box li:hover .line_left {
+	animation: mysecond 1s 1;
+	animation-delay: 0s;
+}
+
+.hot_box li:hover .line_right {
+	animation: mysecond 1s 1;
+	animation-delay: 0s;
+	/*animation-direction: reverse;*/
+}
