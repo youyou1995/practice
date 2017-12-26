@@ -1,0 +1,225 @@
+<!doctype html>
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的收藏</title>
+
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!--打开网页图标-->
+		<link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+
+		<link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+		<meta name="msapplication-TileColor" content="#0e90d2">
+
+		<link rel="stylesheet" href="assets/css/amazeui.min.css">
+		<link rel="stylesheet" href="assets/css/app.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="font_400415_exp9o0knklat6gvi/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/collection.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header data-am-widget="header" class="am-header am-header-default top-header">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.go(-1)" class="">
+					<i class="am-header-icon am-icon-angle-left"></i>
+				</a>
+			</div>
+			<h1 class="am-header-title">
+          <a href="#title-link" class="">
+               我的收藏
+          </a>
+         </h1>
+			<div class="am-header-right am-header-nav">
+				<a>
+					编辑
+				</a>
+			</div>
+		</header>
+		<!--标题-->
+		<div class="top-title-box am-cf">
+			<div class="am-fl top-title top-title-red" id="title1">
+				<a href="collection.html">
+					商品收藏
+				</a>
+			</div>
+			<div class="am-fl top-title" id="title2">
+				<a href="collection1.html">
+					店铺收藏</a>
+			</div>
+		</div>
+		<!--商品收藏-->
+		<div class="shop-big">
+
+			<div class="txt">
+				—正在开抢—
+			</div>
+			<div class="shop-box">
+				<ul>
+					<li class="">
+
+						<div class="shop-li-box am-cf">
+
+							<div class="shop-li-icon am-fl">
+								<i class="iconfont  icon-weixuanzhong"></i>
+							</div>
+							<a href="details.html">
+								<div class="shop-li-pic am-fl">
+									<img src="img/collection/comm-1.jpg" />
+								</div>
+								<div class="shop-li-txt am-fl">
+									<p class="shop-li-txt-title">七格格系带收腰连衣裙</p>
+									<p class="shop-li-txt-price">¥599 <span>¥599</span></p>
+									<p class="shop-li-sub">
+										<span>满减</span> 满99元减10元
+									</p>
+								</div>
+							</a>
+						</div>
+						<div class="shop-li-day">
+							剩1天
+						</div>
+
+						<div class="shop-li-add">
+							<a href="Shopping.html">加入购物车</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--店铺收藏-->
+
+		<!--返回首页-->
+		<div class="order-b am-cf">
+			<a href="index.html" class="am-u-sm-4">
+				返回首页
+			</a>
+			<a href="#" class="am-u-sm-4">
+				客户端
+			</a>
+			<a href="#" class="am-u-sm-4">
+				电脑版
+			</a>
+		</div>
+		<div class="b-box">
+			copyright © 武汉奇米网络科技有限公司
+		</div>
+		<!--删除-->
+		<div class="del-box am-cf">
+			<div class="del-l am-fl">
+				已选择<span>0</span>件商品
+			</div>
+			<div class="del-r am-fr">
+				<a href="#">
+					删除
+				</a>
+			</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="assets/js/jquery.min.js"></script>
+		<!--<![endif]-->
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/amazeui.min.js"></script>
+		<script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 'auto',
+			//			paginationClickable: true
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var f = true;
+			$(".am-header-right").click(function() {
+				if(f) {
+					$(".am-header-left").css("display", "none");
+					$(".am-header-title a").text("编辑");
+					$(this).find("a").text("取消");
+					$(".top-title-box").css("display", "none");
+					$(".shop-li-box").stop(true, true).animate({
+						left: 0
+					}, 500);
+					$(".shop-li-add").css("display", "none");
+					$(".del-box").animate({
+						bottom: 0
+					}, 500)
+					f = false;
+				} else {
+					$(".am-header-left").css("display", "block");
+					$(".am-header-title a").text("我的收藏");
+					$(this).find("a").text("编辑");
+					$(".top-title-box").css("display", "block");
+					$(".shop-li-add").css("display", "block");
+					$(".del-box").animate({
+						bottom: "-4rem"
+					}, 500)
+					$(".shop-li-box").stop(true, true).animate({
+						left: "-4rem"
+					}, 500);
+					f = true;
+				}
+
+			})
+			//选项卡
+			$("#title1").click(function() {
+				$("#title2").removeClass("top-title-red");
+				$(this).addClass("top-title-red");
+				$(".shop-big").css("display", "block");
+				$(".store-big").css("display", "none");
+			})
+			$("#title2").click(function() {
+				$("#title1").removeClass("top-title-red");
+				$(this).addClass("top-title-red");
+				$(".shop-big").css("display", "none");
+				$(".store-big").css("display", "block");
+			});
+			$(".shop-li-icon .iconfont").click(function() {
+				if($(this).is(".icon-weixuanzhong")) {
+					$(this).removeClass("icon-weixuanzhong").addClass("icon-radio-checked").css("color", '#ff464e');
+				} else {
+					$(this).removeClass("icon-radio-checked").addClass("icon-weixuanzhong").css("color", '#9b9b9b');
+				}
+				num();
+			});
+			//选中数量
+			function num() {
+				$(".del-l span").text($(".shop-li-icon .icon-radio-checked").length);
+			};
+			//删除
+			$(".del-r").click(function() {
+				$(".shop-li-icon .icon-radio-checked").parents("li").remove();
+				num();
+			})
+		})
+	</script>
+
+</html>

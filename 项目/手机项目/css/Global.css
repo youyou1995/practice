@@ -1,0 +1,207 @@
+/**/
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.sale-slider-box {
+	vertical-align: top;
+	display: inline-block;
+	width: 12.54667rem;
+	height: 100%;
+	margin-right: .42667rem;
+	text-align: center;
+	background-color: #fff;
+	margin-top: 0;
+	overflow: hidden;
+}
+
+.sale-slider-box-pic {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+
+/*开始*/
+
+.top-header {
+	background-color: #FFFFFF;
+	color: #333;
+}
+
+.top-header h1 a {
+	color: #333 !important;
+}
+
+.top-header .top-header-i a {
+	font-size: 2rem;
+	color: #333;
+}
+
+
+/*商品*/
+
+.comm {
+	margin-bottom: -0.8rem;
+	background-color: #F4F4F8;
+}
+
+.comm-pic {
+	width: 100%;
+	position: relative;
+}
+
+.comm-pic img {
+	width: 100%;
+	height: 100%;
+}
+
+.comm-pic-top {
+	/*background: url(../img/Global/top-jiaobiao.png)no-repeat;*/
+	position: absolute;
+	top: 0;
+	left: 1rem;
+	width: 4.512rem;
+	height: 3.168rem;
+}
+
+.comm-pic-top img {
+	width: 100%;
+	height: 100%;
+}
+
+.comm-pic-top p {
+	margin: 0;
+}
+
+.comm-pic-top-title {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #FFFFFF;
+}
+
+.comm-pic-top-txt {}
+
+
+/*轮播图*/
+
+.list-slider {
+	margin-bottom: .8rem;
+	background-color: #fff;
+}
+
+.list-slider-box {
+	width: 9rem;
+	text-align: center;
+	/*height: 13.33rem;*/
+}
+
+.list-slider-box img {
+	display: inline-block;
+}
+
+.list-slider-box p {
+	margin: 0;
+}
+
+.list-price {
+	/*padding-bottom: 10px;*/
+	text-align: center;
+	line-height: 1;
+}
+
+.list-price span {
+	display: inline-block;
+	color: #60e;
+	margin-right: 2px;
+	font-size: 1rem;
+	margin-right: -0.5rem;
+}
+
+.list-price .list-price-del {
+	color: #bbb;
+	text-decoration: line-through;
+}
+
+.list-title {
+	font-size: 1rem;
+	padding: 0 0.5rem;
+	color: #666;
+	width: 100%;
+	overflow: hidden;
+}
+
+.list-a-img {
+	display: block;
+	/*width: 8.54667rem;*/
+	width: 8rem;
+	/*width: 100%;*/
+	/*height: 5.54667rem;*/
+}
+
+
+/*底部导航*/
+
+.am-navbar-default .bottom-ul {
+	background-color: #FFFFFF;
+}
+
+.am-navbar-default .bottom-a {
+	color: #333;
+}
+
+.bottom-ul .bottom-color {
+	color: #FF464E;
+}
+
+
+/*返回顶部*/
+
+.bottom-fix-box {
+	right: 4%;
+	overflow: initial;
+}
+
+.bottom-fix {
+	width: 3.70667rem;
+	height: 3.70667rem;
+	border-radius: 1.70667rem;
+	text-align: center;
+	display: block;
+	margin-bottom: .04267rem;
+	background: #fff;
+	border: 1px solid #ebebeb;
+}
+
+.bottom-fix .bottom-fix-pic {
+	width: 2.024rem;
+	height: 2.024rem;
+	margin-top: .74133rem;
+	max-width: 50rem;
+}

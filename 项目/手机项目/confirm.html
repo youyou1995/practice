@@ -1,0 +1,309 @@
+<!doctype html>
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>订单确认</title>
+
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!--打开网页图标-->
+		<link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+
+		<link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+		<meta name="msapplication-TileColor" content="#0e90d2">
+
+		<link rel="stylesheet" href="assets/css/amazeui.min.css">
+		<link rel="stylesheet" href="assets/css/app.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="font_400415_exp9o0knklat6gvi/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/confirm.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header data-am-widget="header" class="am-header am-header-default top-header">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.go(-1)" class="">
+					<i class="am-header-icon am-icon-angle-left"></i>
+				</a>
+			</div>
+			<h1 class="am-header-title">
+          <a href="#title-link" class="">
+             订单确认
+          </a>
+        </h1>
+		</header>
+		<!--地址-->
+		<div class="addr-box">
+			<div class="addr-black am-cf">
+				<div class="addr-black-l am-fl">
+					<img src="img/img/shouhuo-address.png" />
+				</div>
+				<div class="addr-black-m am-fl">
+					<p class="addr-black-name">
+						<span class="addr-name">王先生</span>
+						<span class="addr-phone">135****5050</span>
+					</p>
+					<p class="addr-specific">山东省&nbsp;青岛市&nbsp;崂山区&nbsp;海尔路18号</p>
+				</div>
+				<div class="addr-black-r am-fr">
+					<span class="am-icon-angle-down"></span>
+				</div>
+			</div>
+			<div class="addr-white-box">
+				<div class="addr-white am-cf">
+					<div class="addr-white-l am-fl">
+						<i class="iconfont  icon-radio-checked"></i>
+					</div>
+					<div class="addr-white-m am-fl">
+						<p class="addr-white-name">
+							<span class="addr-name">王先生</span>
+							<span class="addr-phone">135****5050</span>
+							<span class="addr-white-default">
+								默认
+							</span>
+						</p>
+						<p class="addr-specific">山东省&nbsp;青岛市&nbsp;崂山区&nbsp;海尔路18号</p>
+					</div>
+					<div class="addr-white-r am-fr">
+						<span class="am-icon-edit"></span>
+					</div>
+				</div>
+				<div class="addr-white-new">
+					<a href="#">添加地址</a>
+					<p>收起<span class="am-icon-angle-up"></span></p>
+				</div>
+			</div>
+		</div>
+		<!--订单详情-->
+		<div class="comm-box am-cf">
+			<div class="comm-pic-l am-fl">
+				<img src="img/confirm/confirm-1.jpg" />
+			</div>
+			<div class="comm-pic-m am-fl">
+				<p class="comm-pic-m-title">VIP·女童春秋款打底裤</p>
+				<p class="comm-pic-m-txt">灰色织带 100适合身高90</p>
+				<p class="comm-pic-m-text">给商家留言<span class="am-icon-angle-up am-icon-md"></span></p>
+			</div>
+			<div class="comm-pic-r am-fr">
+				<p class="comm-pic-r-price">￥25.90</p>
+				<p class="comm-pic-r-num">×1</p>
+			</div>
+		</div>
+		<!--商家留言-->
+		<div class="form">
+			<form action="" method="post">
+				<input type="text" maxlength="50" placeholder="给卖家留言(50字以内)" value="" />
+			</form>
+		</div>
+		<!--价格-->
+		<div class="price-box">
+			<div class="am-cf price-title">
+				<div class="price-l am-fl">
+					商品总额
+				</div>
+				<div class="price-r am-fr">
+					¥25.90
+				</div>
+			</div>
+			<div class="am-cf price-title">
+				<div class="price-l am-fl">
+					总运费 <span>(24小时内发货)</span>
+				</div>
+				<div class="price-r am-fr">
+					¥0.00
+				</div>
+			</div>
+			<div class="am-cf price-title">
+				<div class="price-l am-fl">
+					优惠总额
+				</div>
+				<div class="price-r am-fr">
+					¥0.00
+				</div>
+				<div class="price-item am-icon-angle-down">
+				</div>
+			</div>
+			<div class="price-small">
+				<div class="am-cf price-title">
+					<div class="price-l am-fl">
+						拼团优惠
+					</div>
+					<div class="price-r am-fr">
+						¥0.00
+					</div>
+
+				</div>
+				<div class="am-cf price-title">
+					<div class="price-l am-fl">
+						活动优惠
+					</div>
+					<div class="price-r am-fr">
+						¥0.00
+					</div>
+
+				</div>
+			</div>
+			<div class="am-cf price-txt">
+				<div class="price-l am-fl">
+					使用优惠券
+				</div>
+				<div class="price-r am-fr" style="color: #bbb;">
+					暂无可用券
+					<div class="am-icon-angle-right price-txt-more"></div>
+				</div>
+			</div>
+			<div class="am-cf price-txt">
+				<div class="price-l am-fl">
+					开卡可省2.59元
+				</div>
+				<div class="price-r am-fr">
+					立即开通
+					<div class="am-icon-angle-right price-txt-more"></div>
+				</div>
+			</div>
+		</div>
+		<!--支付方式-->
+		<div class="pay-box">
+			<div class="pay-title">支付方式</div>
+			<div class="pay-wechat am-cf" id="wechat">
+				<div class="pay-wechat-pic am-fl">
+					<img src="img/confirm/icon_wx.png" />
+					<span class="pay-wechat-title">微信支付</span>
+					<span class="pay-wechat-txt">推荐</span>
+				</div>
+				<div class="pay-wechat-xuan am-fr">
+					<span class="iconfont  icon-weixuanzhong"></span>
+				</div>
+			</div>
+			<div class="pay-wechat am-cf" id="ali">
+				<div class="pay-wechat-pic am-fl">
+					<img src="img/confirm/icon_ali.png" />
+					<span class="pay-wechat-title">微信支付</span>
+				</div>
+				<div class="pay-wechat-xuan am-fr">
+					<span class="iconfont  icon-weixuanzhong"></span>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="go-pay-box am-cf">
+			<div class="go-pay am-fr">
+				<a href="Payment.html">去付款</a>
+			</div>
+			<div class="go-pay-price am-fr">
+				<img src="img/confirm/info-gray.png" class="" />
+				<span> 应付金额：</span>
+				<span class="go-pay-money">￥25.90</span>
+			</div>
+		</div>
+		<!--弹窗-->
+		<div class="tab-box ">
+			<div class="tab-big am-cf">
+				<div class="tab-l am-fl">
+					余额支付：
+					<span>￥0.00</span>
+				</div>
+				<div class="tab-m am-fl">
+					还需支付：
+					<span>￥25.90</span>
+				</div>
+				<div class="tab-r am-fr">
+					<img src="img/confirm/close.png" />
+				</div>
+				<img src="img/confirm/arrow_down.png" class="tab-pic-b" />
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="assets/js/jquery.min.js"></script>
+		<!--<![endif]-->
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/amazeui.min.js"></script>
+		<script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//地址折叠
+			$(".addr-black-r").click(function() {
+				$(".addr-black").css("display", "none");
+				$(".addr-white-box").css("display", "block");
+			})
+			$(".addr-white-new p").click(function() {
+				$(".addr-black").css("display", "block");
+				$(".addr-white-box").css("display", "none");
+			})
+			//商家留言
+			$(".comm-pic-m-text").click(function() {
+				if($(this).find("span").is(".am-icon-angle-up")) {
+					$(".form").css("display", "block");
+					$(this).find("span").removeClass("am-icon-angle-up").addClass("am-icon-angle-down");
+				} else {
+					$(".form").css("display", "none");
+					$(this).find("span").removeClass("am-icon-angle-down").addClass("am-icon-angle-up");
+				}
+			})
+			//优惠
+			$(".price-item").click(function() {
+				if($(this).is(".am-icon-angle-down")) {
+					$(".price-small").css("display", "block");
+					$(this).removeClass("am-icon-angle-down").addClass("am-icon-angle-up");
+				} else {
+					$(".price-small").css("display", "none");
+					$(this).removeClass("am-icon-angle-up").addClass("am-icon-angle-down");
+				}
+			})
+			//支付方式
+			$(".pay-wechat").click(function() {
+
+				if($(this).find(".pay-wechat-xuan").find("span").is(".icon-weixuanzhong")) {
+					$(".pay-wechat-xuan span").addClass("icon-weixuanzhong").css("color", '#333');
+					$(".pay-wechat-xuan span").removeClass("icon-radio-checked");
+					$(this).find(".pay-wechat-xuan").find("span").removeClass("icon-weixuanzhong").addClass("icon-radio-checked").css("color", '#ff464e');
+				} else {
+					$(".pay-wechat-xuan span").addClass("icon-weixuanzhong").css("color", '#333');
+					$(".pay-wechat-xuan span").removeClass("icon-radio-checked");
+					$(".pay-wechat-xuan span").addClass("icon-weixuanzhong");
+					$(this).find(".pay-wechat-xuan").find("span").addClass("icon-weixuanzhong").css("color", '#333');
+				}
+			})
+			//弹窗
+			$(".go-pay-price img").click(function() {
+				if($(".tab-box").css("display") == "none") {
+					$(".tab-box").css("display", "block");
+				} else {
+					$(".tab-box").css("display", "none");
+				}
+			})
+			$(".tab-r").click(function() {
+				$(".tab-box").css("display", "none");
+			})
+		})
+	</script>
+
+</html>

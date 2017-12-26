@@ -1,0 +1,464 @@
+body {
+	background-color: #f4f4f8;
+	color: #333;
+}
+
+a {
+	color: #666;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+
+/*头部*/
+
+.top-bg .top-header h1 {
+	margin: 0;
+}
+
+.top-header .am-header-nav a i {
+	font-size: 2.5rem;
+}
+
+.top-header {
+	background-color: #FFFFFF;
+}
+
+.top-header .am-header-left a {
+	color: #333;
+	font-size: 2.5rem;
+}
+
+.top-header .am-header-title a {
+	color: #333;
+	font-size: 1.8rem;
+}
+
+.top-header .am-header-nav a {
+	font-size: 1.5rem;
+	color: #4a4a4a;
+}
+
+
+/*地址*/
+
+.addr-box {
+	margin-bottom: 0.8rem;
+	font-size: 1.5rem;
+}
+
+.addr-black {
+	color: #fff;
+	background-color: #48505a;
+	padding: 1rem;
+}
+
+.addr-specific {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.addr-black-l {
+	/*background:url(../img/img/shouhuo-address.png) no-repeat;*/
+	width: 1.5rem;
+	height: 100%;
+	margin: 1.5rem 1rem 0 0;
+}
+
+.addr-black-l img {
+	width: 100%;
+	/*height: 100%;*/
+}
+
+.addr-black-r {
+	padding: 0.9rem 0.6rem 0 0;
+	font-size: 2rem;
+}
+
+
+/*编辑地址*/
+
+.addr-white-box {
+	background-color: #fff;
+	font-size: 1.55rem;
+	display: none;
+}
+
+.addr-white {
+	padding: 1rem;
+}
+
+.addr-white-name {
+	position: relative;
+}
+
+.addr-white-default {
+	/*position: absolute;
+	top: 0;
+	right: 0;*/
+	font-size: 1rem;
+	color: #ff464e;
+	padding: 0.1rem 0.3rem;
+	border: 1px solid #ff464e;
+}
+
+.addr-white-m .addr-specific {
+	padding-top: 0.5rem;
+}
+
+.addr-white-l {
+	padding-right: 1rem;
+	height: 100%;
+	text-align: center;
+}
+
+.addr-white-l i {
+	line-height: 4.5rem;
+	font-size: 2rem;
+	color: #ff464e;
+}
+
+.addr-white-r {
+	/*padding-right: 0.6rem;*/
+	height: 100%;
+	text-align: center;
+	line-height: 4.5rem;
+	color: #999;
+	font-size: 2rem;
+}
+
+.addr-white-new {
+	padding: 1rem;
+	text-align: center;
+	position: relative;
+}
+
+.addr-white-new a {
+	display: inline-block;
+	font-size: 1.5rem;
+	padding: 0.5rem 2rem;
+	color: #333;
+	border: 1px solid #333;
+}
+
+.addr-white-new p {
+	position: absolute;
+	top: 2rem;
+	right: 1rem;
+	font-size: 1rem;
+	color: #999;
+}
+
+.addr-white-new p span {
+	font-size: 2rem;
+	padding-left: 0.5rem;
+}
+
+
+/*订单详情*/
+
+.comm-box {
+	background-color: #fff;
+	padding: 1rem;
+}
+
+.comm-pic-l {
+	width: 6rem;
+	height: 6rem;
+}
+
+.comm-pic-l img {
+	width: 100%;
+}
+
+.comm-pic-m {
+	padding-left: 1.5rem;
+	height: 100%;
+}
+
+.comm-pic-m-title {
+	width: 100%;
+	color: #333;
+	font-size: 1rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.comm-pic-m-txt {
+	width: 100%;
+	color: #bbb;
+	font-size: 1rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.comm-pic-m-text {
+	font-size: 1rem;
+	color: #999;
+	padding-top: 1rem;
+}
+
+.comm-pic-m-text span {
+	padding-left: 0.2rem;
+	/*font-size: 1.5rem;*/
+	display: inline-block;
+}
+
+.comm-pic-r {
+	text-align: right;
+}
+
+.comm-pic-r-price {
+	font-size: 1.5rem;
+	color: #333;
+}
+
+.comm-pic-r-num {
+	font-size: 1rem;
+	color: #bbb;
+}
+
+.form {
+	background-color: #fff;
+	padding: 0.5rem 1rem;
+	display: none;
+}
+
+.form input {
+	background: #f4f4f8;
+	border: 0;
+	width: 100%;
+	padding: 0.5rem;
+	outline: none;
+}
+
+
+/*价格*/
+
+.price-box {
+	background-color: #fff;
+	padding-top: 1rem;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 0.8rem;
+}
+
+.price-title {
+	color: #333;
+	font-size: 1.3rem;
+	padding: 0.5rem 2.5rem 0.5rem 1rem;
+	position: relative;
+}
+
+.price-title span {
+	color: rgb(187, 187, 187);
+}
+
+.price-item {
+	position: absolute;
+	top: 0;
+	right: 1rem;
+	font-size: 2rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.price-more {
+	position: absolute;
+	top: 0;
+	right: 1rem;
+	font-size: 2rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.price-small {
+	background: #f4f4f8;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+	padding-left: 1rem;
+	display: none;
+}
+
+.price-txt {
+	color: #333;
+	font-size: 1.3rem;
+	padding: 1rem 2.5rem 1rem 1rem;
+	position: relative;
+}
+
+.price-txt-more {
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+	font-size: 2rem;
+	color: #333;
+	font-weight: 600;
+}
+
+
+/*支付方式*/
+
+.pay-box {
+	background-color: #fff;
+	padding: 0 1rem;
+	margin-bottom: 4.8rem;
+}
+
+.pay-title {
+	height: 4rem;
+	line-height: 4rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.pay-wechat {
+	height: 4rem;
+	margin: auto 0;
+	/*text-align: center;*/
+	line-height: 4rem;
+}
+
+.pay-wechat-pic {
+	height: 100%;
+	line-height: 4rem;
+}
+
+.pay-wechat-pic img {
+	width: 2rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.pay-wechat-pic span {
+	display: inline-block;
+}
+
+.pay-wechat-title {
+	font-size: 1.5rem;
+	vertical-align: middle;
+}
+
+.pay-wechat-txt {
+	font-size: 1rem;
+	padding: 0.1rem 0.5rem;
+	border: 1px solid #ff464e;
+	color: #ff464e;
+	vertical-align: middle;
+	line-height: initial;
+}
+
+.pay-wechat-xuan {
+	height: 100%;
+	overflow: hidden;
+}
+
+.pay-wechat-xuan span {
+	font-size: 2.5rem;
+	color: #333333;
+}
+
+
+/*底部*/
+
+.go-pay-box {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 4rem;
+	width: 100%;
+	line-height: 4rem;
+	background-color: #fff;
+	z-index: 100;
+	overflow: hidden;
+}
+
+.go-pay a {
+	width: 11rem;
+	background-color: #ff464e;
+	font-size: 1.5rem;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+}
+
+.go-pay-price {
+	padding-right: 1rem;
+}
+
+.go-pay-price img {
+	width: 1rem;
+}
+
+.go-pay-price span {
+	vertical-align: middle;
+	color: #333;
+	font-size: 1.2rem;
+}
+
+.go-pay-price .go-pay-money {
+	color: #ff464e;
+	vertical-align: middle;
+	font-size: 1.8rem;
+}
+
+
+/*弹窗*/
+
+.tab-box {
+	position: fixed;
+	left: 0;
+	bottom: 4rem;
+	width: 100%;
+	padding: 1rem;
+	color: #fff;
+	font-size: 1rem;
+	border-radius: 1rem;
+	display: none;
+}
+
+.tab-big {
+	padding: 0.6rem;
+	background: rgba(0, 0, 0, .7);
+	width: 100%;
+}
+
+.tab-l {
+	padding: 0 1rem;
+	border-right: 1px solid #999;
+}
+
+.tab-m {
+	padding: 0 1rem;
+}
+
+.tab-r img {
+	margin-right: 0.5rem;
+	width: 1.3rem;
+}
+
+.tab-pic-b {
+	position: absolute;
+	bottom: 0.6rem;
+	width: 1.2rem;
+	height: 0.5rem;
+	left: 20%;
+}

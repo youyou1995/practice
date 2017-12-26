@@ -1,0 +1,156 @@
+button,
+input:not([type=radio]):not([type=checkbox]),
+select {
+	vertical-align: initial;
+}
+
+.top-box {
+	border-bottom: 1px solid #ebebeb;
+	padding: 0.8rem 1rem;
+}
+
+.top-l {
+	background-color: #f2f2f2;
+	width: 86%;
+	padding: 0.3rem 0;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0.2rem;
+}
+
+.top-l button {
+	position: absolute;
+	top: 0.4rem;
+	left: 0.3rem;
+	background-color: #F2F2F2;
+	border: 0;
+	color: #bbb;
+}
+
+.top-l input {
+	display: inline-block;
+	border: 0;
+	background-color: #F2F2F2;
+	width: 100%;
+	margin-left: 3rem;
+	color: #bbb;
+	font-size: 1.5rem;
+	outline-style: none;
+}
+
+.top-r {
+	text-align: center;
+	line-height: 2.5rem;
+}
+
+.top-r a {
+	display: inline-block;
+	color: #333;
+	font-size: 1.5rem;
+}
+
+.top-del {
+	position: absolute;
+	top: 0;
+	right: 0.5rem;
+	display: inline-block;
+	font-size: 2.5rem;
+	line-height: 2rem;
+	color: #bbb;
+	display: none;
+}
+
+
+/*热搜*/
+
+.hot-box {
+	padding: 1rem;
+}
+
+.hot-title {
+	font-size: 1.5rem;
+	color: #999;
+}
+
+.history-search a,
+.hot-search a {
+	background-color: #f4f4f4;
+	border-radius: .17067rem;
+	padding: 0.4rem 1rem;
+	color: #666;
+	margin-right: 1rem;
+	font-size: 1rem;
+	margin-top: 1rem;
+	display: inline-block;
+}
+
+
+/*搜索历史*/
+
+.history-box {
+	padding: 1rem;
+}
+
+.history-title {
+	font-size: 1.5rem;
+	color: #999;
+	position: relative;
+}
+
+.history-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 1.6rem;
+	color: #999;
+	cursor: pointer;
+}
+
+
+/*常见分类*/
+
+.classify-box {
+	padding: 1rem;
+}
+
+.classify-title {
+	width: 4rem;
+	height: 4rem;
+	background-color: rgba(176, 185, 255, .2);
+	border-radius: 100%;
+	font-size: 1.2rem;
+	color: #999;
+	line-height: 4rem;
+	text-align: center;
+}
+
+.classify-search a {
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	background-color: rgba(176, 185, 255, .2);
+	border-radius: 100%;
+	font-size: 1.2rem;
+	color: #999;
+	line-height: 4rem;
+	text-align: center;
+	margin: 0.5rem 1.5rem 0 0;
+	overflow: hidden;
+}
+
+.classify-search a:nth-child(2) {
+	background-color: rgba(255, 203, 90, .2);
+}
+
+.classify-search a:nth-child(3) {
+	background-color: rgba(255, 161, 134, .2);
+}
+
+.classify-search a:nth-child(4) {
+	background-color: rgba(146, 231, 141, .2);
+}
+
+.classify-search a:nth-child(5) {
+	background-color: rgbargba(255, 146, 170, .2);
+	margin-right: 0;
+}

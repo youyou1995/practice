@@ -1,0 +1,219 @@
+body {
+	/*background-color: #f4f4f8;*/
+	color: #333;
+}
+
+a {
+	color: #666;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+.top-bg .top-header h1 {
+	margin: 0;
+}
+
+.top-header .am-header-nav a i {
+	font-size: 2.5rem;
+}
+
+.top-header {
+	background: #ff5a61;
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #ff5a61), color-stop(1, #fd631c));
+	background: -webkit-linear-gradient(-30deg, #ff5a61 50%, #fd631c);
+	background: -webkit-linear-gradient(300deg, #ff5a61 50%, #fd631c);
+	background: linear-gradient(150deg, #ff5a61 50%, #fd631c);
+}
+
+.top-header .am-header-left a {
+	color: #fff;
+	font-size: 2.5rem;
+}
+
+.top-header .am-header-title a {
+	color: #fff;
+	font-size: 1.8rem;
+}
+
+.top-header .am-header-nav a {
+	font-size: 1.5rem;
+}
+
+
+/*选项卡*/
+
+.sign-top {
+	padding-top: 0.5rem;
+	margin: 0;
+}
+
+.am-tabs-d2 .am-tabs-nav {
+	background-color: #fff;
+}
+
+.am-tabs-d2 .am-tabs-nav>.am-active a {
+	color: #ff464e;
+}
+
+.am-tabs-d2 .am-tabs-nav>.am-active {
+	border-bottom: 2px solid #ff464e;
+	background-color: #fff;
+}
+
+.am-tabs-d2 .am-tabs-nav>.am-active:after {
+	border-bottom-color: #fff;
+}
+
+.sign-box .sign-top ul li a {
+	color: #666;
+}
+
+.am-form .am-form-group .reg-input {
+	border: 0;
+	/*border-bottom: 1px solid #ccc;*/
+	outline: none;
+}
+
+.reg-btn {
+	width: 100%;
+	padding: 1rem 1.2rem;
+	background: #dbdbdb;
+	border-color: #dbdbdb;
+	font-size: 2rem;
+}
+
+.sign-top-bd {
+	border: 0;
+}
+
+.sign-top-bd .sign-top-tab {
+	padding: 1rem 1rem 0 1rem;
+	height: 100%;
+}
+
+.am-tabs-bd .am-tab-panel {
+	padding: 1rem 1rem 0 1rem;
+}
+
+fieldset {
+	padding: 0;
+	margin: 0;
+}
+
+
+/**/
+
+.rem-box {
+	padding: 1rem;
+	margin-bottom: 4.3rem;
+}
+
+.rem-l {
+	width: 1.2rem;
+	height: 1.2rem;
+	border: 2px solid #999;
+	margin-right: 0.5rem;
+	position: relative;
+}
+
+.rem-l-pic {
+	border-color: #ff464e;
+	background: #ff464e;
+}
+
+.rem-l-pic img {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.am-form-group {
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
+
+.am-form-group .del {
+	position: absolute;
+	top: -0.5rem;
+	right: 1rem;
+	font-size: 2.5rem;
+	color: #bbb;
+	display: none;
+}
+
+.am-form-group a {
+	font-size: 1rem;
+	padding-left: 2rem;
+}
+
+.am-form .am-form-group .code {
+	display: inline-block;
+	width: 70%;
+}
+
+.am-form-group .code-del {
+	position: absolute;
+	top: -0.5rem;
+	left: 70%;
+	font-size: 2.5rem;
+	color: #bbb;
+	display: none;
+}
+
+.am-btn-secondary:focus,
+.am-btn-secondary:hover {
+	background-color: #ff464e;
+	border-color: #ff464e;
+}
+
+.rem-l-txt {
+	color: #999;
+	font-size: 1rem;
+	line-height: 1rem;
+}
+
+.rem-r {
+	padding-right: 0.5rem;
+	color: #999;
+	font-size: 1rem;
+	line-height: 1rem;
+}
+
+
+/*第三方账号*/
+
+.thrid-title {
+	text-align: center;
+	padding-bottom: 2.8rem;
+}
+
+.thrid-pic {
+	text-align: center;
+}
+
+.thrid-pic a {
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	margin: 0 1rem;
+}
+
+.thrid-pic a img {
+	width: 100%;
+	height: 100%;
+}

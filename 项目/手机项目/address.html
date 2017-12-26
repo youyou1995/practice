@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>请选择收获地址</title>
+
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!--打开网页图标-->
+		<link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+
+		<link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+		<meta name="msapplication-TileColor" content="#0e90d2">
+
+		<link rel="stylesheet" href="assets/css/amazeui.min.css">
+		<link rel="stylesheet" href="assets/css/app.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="font_400415_exp9o0knklat6gvi/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/MyAccount.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header data-am-widget="header" class="am-header am-header-default top-header">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.go(-1)" class="">
+					<i class="am-header-icon am-icon-angle-left"></i>
+				</a>
+			</div>
+			<h1 class="am-header-title">
+          <a href="#title-link" class="">
+                                                 我的账户
+          </a>
+        </h1>
+		</header>
+		<!--地址-->
+		<div class="a-box">
+			<div class="a-top">
+				<span class="a-top-name">王先生</span>
+				<span class="a-top-phone">135****5050</span>
+				<p class="a-top-adder">山东省&nbsp;青岛市&nbsp;崂山区&nbsp;海尔路18号</p>
+			</div>
+			<div class="a-tow-box am-cf">
+				<div class="a-two-adder am-fl">
+					<i class="iconfont  icon-radio-checked"></i>
+					<span>默认地址</span>
+				</div>
+				<div class="a-two-del am-fr">
+					<a href="#">
+						<span class="am-icon-trash"></span>删除
+					</a>
+				</div>
+				<div class="a-two-del am-fr">
+					<a href="address-1.html">
+						<span class="am-icon-edit"></span>编辑
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="a-box">
+			<div class="a-top">
+				<span class="a-top-name">王先生</span>
+				<span class="a-top-phone">135****5050</span>
+				<p class="a-top-adder">山东省&nbsp;青岛市&nbsp;崂山区&nbsp;海尔路18号</p>
+			</div>
+			<div class="a-tow-box am-cf">
+				<div class="a-two-adder am-fl">
+					<i class="iconfont  icon-weixuanzhong" style="color: #333;"></i>
+					<span id="">
+						设为默认地址
+					</span>
+				</div>
+				<div class="a-two-del am-fr">
+					<a href="#">
+						<span class="am-icon-trash"></span>删除
+					</a>
+				</div>
+				<div class="a-two-del am-fr">
+					<a href="address-1.html">
+						<span class="am-icon-edit"></span>编辑
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="a-b-box">
+			<a href="address-1.html" id="" class="a-b-span">
+				添加新地址
+			</a>
+		</div>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="assets/js/jquery.min.js"></script>
+		<!--<![endif]-->
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/amazeui.min.js"></script>
+		<script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//删除
+			$(".a-two-del").click(function() {
+				$(this).parents(".a-box").remove();
+			});
+			//选择
+			$(".a-two-adder").click(function() {
+				if($(this).find("i").is(".icon-weixuanzhong")) {
+					$(".a-two-adder").find("i").removeClass("icon-radio-checked").addClass("icon-weixuanzhong").css("color", "#333333");
+					$(".a-two-adder").find("span").text("设为默认地址");
+					$(this).find("i").removeClass("icon-weixuanzhong").addClass("icon-radio-checked").css("color", "#FF464E");
+					$(this).find("span").text("默认地址");
+				}
+			});
+		});
+	</script>
+
+</html>

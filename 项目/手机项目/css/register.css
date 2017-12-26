@@ -1,0 +1,120 @@
+body {
+	/*background-color: #f4f4f8;*/
+	color: #333;
+}
+
+a {
+	color: #666;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+input {
+	outline: none;
+}
+
+.top-bg .top-header h1 {
+	margin: 0;
+}
+
+.top-header .am-header-nav a i {
+	font-size: 2.5rem;
+}
+
+.top-header {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #dedede;
+}
+
+.top-header .am-header-left a {
+	color: #333;
+	font-size: 2.5rem;
+}
+
+.top-header .am-header-title a {
+	color: #333;
+	font-size: 1.8rem;
+}
+
+.top-header .am-header-nav a {
+	font-size: 1.5rem;
+}
+
+
+/*注册*/
+
+.reg-box {
+	padding: 0 1rem;
+}
+
+.reg-title {
+	padding: 2rem 0;
+	text-align: center;
+	color: #999999;
+	font-size: 1.2rem;
+}
+
+.am-form .am-form-group .reg-input {
+	border: 0;
+	/*border-bottom: 1px solid #ccc;*/
+	outline: none;
+}
+
+.reg-btn {
+	width: 100%;
+	padding: 1rem 1.2rem;
+	background: #dbdbdb;
+	border-color: #dbdbdb;
+	font-size: 2rem;
+}
+
+.am-form-group {
+	position: relative;
+	border-bottom: 1px solid #ccc;
+}
+
+.am-form .am-form-group .code {
+	display: inline-block;
+	width: 70%;
+}
+
+.am-form .am-form-group a {
+	font-size: 1rem;
+	padding-left: 2rem;
+}
+
+.am-btn-secondary:focus,
+.am-btn-secondary:hover {
+	background-color: #ff464e;
+	border-color: #ff464e;
+}
+
+.phone-del {
+	position: absolute;
+	top: -0.5rem;
+	right: 1rem;
+	font-size: 2.5rem;
+	color: #bbb;
+	display: none;
+}
+
+.code-del {
+	position: absolute;
+	top: -0.5rem;
+	left: 70%;
+	font-size: 2.5rem;
+	color: #bbb;
+	display: none;
+}

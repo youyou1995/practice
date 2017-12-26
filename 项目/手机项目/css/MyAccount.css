@@ -1,0 +1,407 @@
+body {
+	background-color: #f4f4f8;
+	color: #333;
+}
+
+a {
+	color: #666;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+select {
+	appearance: initial;
+	/*appearance: none;*/
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+
+/*头部*/
+
+.top-bg .top-header h1 {
+	margin: 0;
+}
+
+.top-header .am-header-nav a i {
+	font-size: 2.5rem;
+}
+
+.top-header {
+	background-color: #FFFFFF;
+}
+
+.top-header .am-header-left a {
+	color: #333;
+	font-size: 2.5rem;
+}
+
+.top-header .am-header-title a {
+	color: #333;
+	font-size: 1.8rem;
+}
+
+.top-header .am-header-nav a {
+	color: #999999;
+	font-size: 1rem;
+}
+
+
+/*头像*/
+
+.m-head-box {
+	padding: 0 1rem;
+	background-color: #fff;
+	margin-bottom: 0.8rem;
+}
+
+.m-head-txt {
+	text-align: center;
+	color: #333;
+	font-size: 1.5rem;
+	line-height: 5rem;
+}
+
+.m-head-pic {
+	text-align: center;
+	position: relative;
+	padding-right: 1rem;
+}
+
+.m-head-pic span {}
+
+.m-head-pic i {
+	position: absolute;
+	top: 20%;
+	color: #999;
+	right: 0rem;
+	font-size: 2rem;
+	/*padding-left: 1rem;
+	line-height: 4rem;*/
+}
+
+.m-head-pic span {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	background-color: #EBEBEB;
+	display: inline-block;
+	margin: 1rem 0;
+}
+
+.m-user-txt {
+	color: #333;
+	font-size: 1.5rem;
+	padding: 1rem 0;
+}
+
+.m-user-t {
+	color: #999;
+	font-size: 1.5rem;
+	padding: 1rem 0;
+}
+
+.m-user-t input {
+	border: 0;
+	padding: 0 1rem;
+	text-align: right;
+	outline: none;
+}
+
+
+/*收货地址*/
+
+.m-addr-box {
+	margin-bottom: 0.8rem;
+	background-color: #fff;
+}
+
+.m-addr-box a {
+	font-size: 1.5rem;
+	color: #333;
+	padding: 1rem;
+	display: inline-block;
+	width: 100%;
+}
+
+
+/*手机号*/
+
+.m-phone-box {
+	background-color: #fff;
+	padding: 0 1rem;
+}
+
+
+/*地址*/
+
+.a-box {
+	background-color: #fff;
+	padding: 0 2rem;
+	margin-top: 0.8rem;
+	overflow: hidden;
+}
+
+.a-top {
+	padding: 1rem 0;
+	color: #333;
+	font-size: 1.5rem;
+	border-bottom: 0.1rem solid #f4f4f8;
+}
+
+.a-top-adder {
+	padding-top: 0.5rem;
+}
+
+.a-tow-box {
+	background-color: #fff;
+	padding: 1rem 0;
+	font-size: 1.5rem;
+}
+
+.a-tow-box span {
+	display: inline-block;
+	font-size: 1.5rem;
+	padding-right: 0.2rem;
+	color: #666;
+}
+
+.a-tow-box a {
+	padding-left: 1rem;
+	display: inline-block;
+	color: #666;
+}
+
+.a-two-adder i {
+	color: #ff464e;
+}
+
+.a-two-del {
+	padding-left: 0.5rem;
+}
+
+
+/*底部*/
+
+.a-b-box {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #ff464e;
+	text-align: center;
+	height: 4rem;
+	width: 100%;
+}
+
+.a-b-box a {
+	color: #fff;
+	font-size: 2rem;
+	display: inline-block;
+	line-height: 4rem;
+}
+
+
+/*添加地址*/
+
+.na-infor-box {
+	background-color: #fff;
+	margin-top: 0.1rem;
+	padding: 0 1rem;
+	margin-bottom: 0.8rem;
+}
+
+.na-infor-box ul li {
+	height: 4rem;
+	text-align: center;
+}
+
+.na-infor-title {
+	font-size: 1.5rem;
+	color: #999;
+	display: inline-block;
+	width: 30%;
+	line-height: 4rem;
+	text-align: left;
+}
+
+.na-infor-box ul li .na-infor-input {
+	width: 60%;
+	border: 0;
+	text-align: left;
+	margin-top: 0.5rem;
+	outline: none;
+	overflow: hidden;
+	appearance: none;
+}
+
+.na-infor-box ul li .na-infor-input option {
+	width: 5rem;
+	/*margin-right: -2rem;*/
+	display: inline-block;
+}
+
+.na-defa-box {
+	background-color: #fff;
+	padding: 0.5rem 1rem;
+	font-size: 1.5rem;
+	color: #666;
+	margin-bottom: 0.8rem;
+}
+
+.na-defa-icon {
+	font-size: 2rem;
+	color: #666;
+}
+
+
+/*完善身份证明*/
+
+.na-idcard-box {
+	background-color: #fff;
+	padding: 1rem;
+	text-align: center;
+}
+
+.na-idcard-span {
+	display: inline-block;
+	color: #333;
+	text-align: center;
+	padding-bottom: 0.5rem;
+}
+
+.na-idcard-txt {
+	background: #f4f4f8;
+	font-size: 1rem;
+	color: #999;
+	text-align: left;
+	/*padding-bottom: 0.5rem;*/
+	overflow: hidden;
+}
+
+.na-idcard-txt em {
+	font-style: normal;
+	color: #333;
+}
+
+.na-idcard-pic {
+	background-color: #fff;
+	padding: 0.5rem 1rem;
+	display: none;
+}
+
+.na-idcard-pic-box {
+	height: 4rem;
+}
+
+.na-idcard-title {
+	font-size: 1.5rem;
+	color: #999;
+	display: inline-block;
+	width: 30%;
+	line-height: 4rem;
+	text-align: left;
+	display: inline-block;
+}
+
+.na-idcard-pic .na-idcard-pic-box .na-idcard-input {
+	display: inline-block;
+	width: 70%;
+	border: 0;
+	text-align: left;
+	margin-top: 0.5rem;
+	outline: none;
+	overflow: hidden;
+}
+
+.na-idcard-box-pic {
+	padding: 1rem 2rem;
+}
+
+.na-idcard-pic-file {
+	position: relative;
+	width: 45%;
+	text-align: center;
+}
+
+.na-idcard-pic-btn {
+	background-color: #fff;
+	border: 1px dashed #999;
+	width: 100%;
+	height: 10rem;
+}
+
+.na-idcard-pic-file-txt {
+	position: absolute;
+	top: 3rem;
+	left: 50%;
+	margin-left: -2.5rem;
+	font-size: 1.5rem;
+	color: #999;
+	text-align: center;
+}
+
+.na-idcard-pic-file-txt p {
+	/*display: inline-block;*/
+	text-align: center;
+}
+
+.na-idcard-pic-idcard {
+	font-size: 1rem;
+	color: #999;
+}
+
+.na-idcard-pic-idcard p {
+	text-align: center;
+}
+
+.na-idcard-pic-idcard img {
+	display: inline-block;
+	text-align: center;
+	width: 80%;
+	padding-bottom: 0.5rem;
+}
+
+.na-hide {
+	background-color: #fff;
+	text-align: center;
+}
+
+.na-hide span {
+	font-size: 2rem;
+	text-align: center;
+}
+
+
+/*底部*/
+
+.order-b-txt {
+	font-size: 2rem;
+	color: #666;
+	text-align: center;
+	width: 100%;
+}
+
+.order-b {
+	margin-top: 0.8rem;
+	background-color: #FFFFFF;
+}
+
+.order-b a {
+	display: inline-block;
+	font-size: 1.5rem;
+	color: #333;
+	padding: 1rem 0;
+	text-align: center;
+}

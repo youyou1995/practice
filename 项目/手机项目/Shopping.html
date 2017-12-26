@@ -1,0 +1,464 @@
+<!doctype html>
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>购物车</title>
+
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!--打开网页图标-->
+		<link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+
+		<link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+		<meta name="msapplication-TileColor" content="#0e90d2">
+
+		<link rel="stylesheet" href="assets/css/amazeui.min.css">
+		<link rel="stylesheet" href="assets/css/app.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="font_400415_exp9o0knklat6gvi/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/Shopping.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header data-am-widget="header" class="am-header am-header-default top-header">
+			<div class="am-header-left am-header-nav">
+				<a href="javascript:history.go(-1)" class="">
+					<i class="am-header-icon am-icon-angle-left"></i>
+				</a>
+			</div>
+			<h1 class="am-header-title">
+          <a href="#title-link" class="">
+                                                   购物车
+          </a>
+         </h1>
+			<div class="am-header-right am-header-nav">
+				<a href="#right-link" class="">
+					编辑
+				</a>
+			</div>
+		</header>
+		<!--商品列表-->
+		<div class="list-box">
+			<div class="list">
+				<div class="list-name-box am-cf">
+					<div class="list-name-xuan am-fl">
+						<i class="iconfont  icon-weixuanzhong list-icon-big-xuan"></i>
+					</div>
+					<div class="list-name-shop am-fl">
+						<i class="iconfont  icon-dianpu list-icon-shop"></i>
+					</div>
+					<div class="list-name-name am-fl">
+						十年品质小店
+						<span class="am-icon-angle-right"></span>
+					</div>
+				</div>
+				<div class="list-pic-box am-cf">
+					<div class="list-pic-xuan am-fl">
+						<i class="iconfont  icon-weixuanzhong list-icon-xuan"></i>
+					</div>
+					<div class="list-pic-pic am-fl">
+						<a href="details.html">
+							<img src="img/Shopping/shop-3.jpg" />
+						</a>
+					</div>
+					<div class="list-pic-price am-fl am-vertical-align">
+						<p class="list-pic-big">简约修身长款毛呢大衣</p>
+						<p class="list-pic-sm"> 蓝色M</p>
+						<div class="list-price am-cf am-vertical-align-bottom">
+							<p class="am-fl list-price-pl"><span class="list-price-pl-red">￥100</span>
+								<span>￥597</span>
+							</p>
+							<p class="am-fr list-price-pr">
+								<span class="list-price-sub">-</span>
+								<span id="" class="list-price-num">
+									1
+								</span>
+								<span class="list-price-add">+</span>
+							</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="list-pic-box am-cf">
+					<div class="list-pic-xuan am-fl">
+						<i class="iconfont  icon-weixuanzhong list-icon-xuan"></i>
+					</div>
+					<div class="list-pic-pic am-fl">
+						<a href="details.html">
+							<img src="img/Shopping/shop-1.jpg" />
+						</a>
+					</div>
+					<div class="list-pic-price am-fl am-vertical-align">
+						<p class="list-pic-big">朵神速大美乳贴</p>
+						<p class="list-pic-sm"> 一周期（3盒装）</p>
+						<div class="list-price am-cf am-vertical-align-bottom">
+							<p class="am-fl list-price-pl"><span class="list-price-pl-red">￥37.9</span>
+								<span>￥597</span>
+							</p>
+							<p class="am-fr list-price-pr">
+								<span class="list-price-sub">-</span>
+								<span id="" class="list-price-num">
+									1
+								</span>
+								<span class="list-price-add">+</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="list-name-box am-cf">
+					<div class="list-name-xuan am-fl">
+						<i class="iconfont  icon-weixuanzhong list-icon-big-xuan"></i>
+					</div>
+					<div class="list-name-shop am-fl">
+						<i class="iconfont  icon-dianpu list-icon-shop"></i>
+					</div>
+					<div class="list-name-name am-fl">
+						咚咚猫童装官方旗舰店
+						<span class="am-icon-angle-right"></span>
+					</div>
+				</div>
+				<div class="list-pic-box am-cf">
+					<div class="list-pic-xuan am-fl">
+						<i class="iconfont  icon-weixuanzhong list-icon-xuan"></i>
+					</div>
+					<div class="list-pic-pic am-fl">
+						<a href="details.html">
+							<img src="img/Shopping/shop-2.jpg" />
+						</a>
+					</div>
+					<div class="list-pic-price am-fl am-vertical-align">
+						<p class="list-pic-big">女童春秋款打底裤</p>
+						<p class="list-pic-sm">黑色织带 130适合身高120</p>
+						<div class="list-price am-cf am-vertical-align-bottom">
+							<p class="am-fl list-price-pl"><span class="list-price-pl-red">￥25.9</span>
+								<span>￥188</span>
+							</p>
+							<p class="am-fr list-price-pr">
+								<span class="list-price-sub">-</span>
+								<span id="" class="list-price-num">
+									1
+								</span>
+								<span class="list-price-add">+</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="list-pic-box am-cf">
+					<div class="list-pic-xuan am-fl">
+						<i class="iconfont  icon-weixuanzhong list-icon-xuan"></i>
+					</div>
+					<div class="list-pic-pic am-fl">
+						<a href="details.html">
+							<img src="img/Shopping/shop-4.jpg" />
+						</a>
+					</div>
+					<div class="list-pic-price am-fl am-vertical-align">
+						<p class="list-pic-big">磨毛印花床裙三件套</p>
+						<p class="list-pic-sm">120cmx200cm 爱的花海三件套qj</p>
+						<div class="list-price am-cf am-vertical-align-bottom">
+							<p class="am-fl list-price-pl"><span class="list-price-pl-red">￥50</span>
+								<span>￥300</span>
+							</p>
+							<p class="am-fr list-price-pr">
+								<span class="list-price-sub">-</span>
+								<span id="" class="list-price-num">
+									1
+								</span>
+								<span class="list-price-add">+</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部导航-->
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+			<ul class="am-navbar-nav am-cf am-avg-sm-4 bottom-ul">
+				<li>
+					<a href="index.html" class=" bottom-a">
+						<img src="img/index/b-1.png" alt="今日上新" />
+						<span class="am-navbar-label">今日上新</span>
+					</a>
+				</li>
+				<li>
+					<a href="Preferred.html" class="bottom-a">
+						<img src="img/index/b-2.png" alt="卷皮优选" />
+						<span class="am-navbar-label">卷皮优选</span>
+					</a>
+				</li>
+				<li>
+					<a href="Global.html" class="bottom-a">
+						<img src="img/index/b-3.png" alt="全球购" />
+						<span class="am-navbar-label">全球购</span>
+					</a>
+				</li>
+				<li>
+					<a href="Shopping.html" class="bottom-a bottom-color">
+						<img src="img/index/b-4-4.png" alt="购物车" />
+						<span class="am-navbar-label">购物车</span>
+					</a>
+				</li>
+				<li>
+					<a href="Personal Center.html" class="bottom-a">
+						<img src="img/index/b-5.png" alt="我的卷皮" />
+						<span class="am-navbar-label">我的卷皮</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--底部-->
+		<div class="b-box am-cf">
+			<div class="am-fl b-both">
+				<i class="iconfont  icon-weixuanzhong list-icon-both"></i> 全选
+			</div>
+
+			<div class="am-fr b-btn">
+				<a href="confirm.html">
+					去结算<span>(0)</span>
+				</a>
+			</div>
+			<div class="am-fr b-price">
+				<p class="b-price-top">合计：<span class="b-price-top-p">￥0</span></p>
+				<p class="b-price-b">总额: <span>￥1,476.00</span> 立减: <span>100</span></p>
+			</div>
+			<div class="am-fr b-del">
+				删除
+			</div>
+			<div class="am-fr b-fav">
+				移入收藏夹
+			</div>
+		</div>
+		<!--弹窗-->
+		<div class="popup-del">
+			请至少选择一个商品
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<!--<script src="assets/js/jquery.min.js"></script>-->
+		<!--<![endif]-->
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/amazeui.min.js"></script>
+		<script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var timer = null;
+			var f = false;
+			//选中
+			$(".icon-weixuanzhong").on("click", function() {
+				//商铺全选
+				if($(this).is(".list-icon-big-xuan")) {
+					if($(this).is(".icon-weixuanzhong")) {
+						$(this).parents(".list").find(".list-icon-xuan").removeClass("icon-weixuanzhong").addClass("icon-radio-checked").css("color", '#ff464e');
+						$(this).removeClass("icon-weixuanzhong").addClass("icon-radio-checked").css("color", '#ff464e');
+					} else if($(this).is(".icon-radio-checked")) {
+						$(this).parents(".list").find(".list-icon-xuan").removeClass("icon-radio-checked").addClass("icon-weixuanzhong").css("color", '#9b9b9b');
+						$(this).removeClass("icon-radio-checked").addClass("icon-weixuanzhong").css("color", '#9b9b9b');
+					}
+				}
+				//商品选择
+				if($(this).is(".list-icon-xuan")) {
+					if($(this).is(".icon-weixuanzhong")) {
+						$(this).removeClass("icon-weixuanzhong").addClass("icon-radio-checked").css("color", '#ff464e');
+						if($(this).parents(".list").find(".list-pic-box").find(".icon-radio-checked").length == $(this).parents(".list").find(".list-icon-xuan").length) {
+							$(this).parents(".list").find(".list-icon-big-xuan").removeClass("icon-weixuanzhong").addClass("icon-radio-checked").css("color", '#ff464e');
+						}
+					} else if($(this).is(".icon-radio-checked")) {
+						$(this).parents(".list").find(".list-icon-big-xuan").removeClass("icon-radio-checked").addClass("icon-weixuanzhong").css("color", '#9b9b9b');
+						$(this).removeClass("icon-radio-checked").addClass("icon-weixuanzhong").css("color", '#9b9b9b');
+					}
+				}
+				//全选
+				if($(this).is(".list-icon-both")) {
+					if($(this).is(".icon-weixuanzhong")) {
+						$(this).removeClass("icon-weixuanzhong").addClass("icon-radio-checked").css("color", '#ff464e');
+						$(".list-icon-xuan").removeClass("icon-weixuanzhong");
+						$(".list-icon-xuan").addClass("icon-radio-checked").css("color", '#ff464e');
+						$(".list-icon-big-xuan").removeClass("icon-weixuanzhong");
+						$(".list-icon-big-xuan").addClass("icon-radio-checked").css("color", '#ff464e');
+					} else {
+						$(this).removeClass("icon-radio-checked").addClass("icon-weixuanzhong").css("color", '#9b9b9b');
+						$(".list-icon-xuan").removeClass("icon-radio-checked");
+						$(".list-icon-xuan").addClass("icon-weixuanzhong").css("color", '#9b9b9b');
+						$(".list-icon-big-xuan").removeClass("icon-radio-checked");
+						$(".list-icon-big-xuan").addClass("icon-weixuanzhong").css("color", '#9b9b9b');
+					}
+				}
+				price();
+				num1();
+				sett();
+				both();
+
+			})
+			//选中数量
+			function num1() {
+				$(".b-btn span").text("(" + $(".list-pic-box").find(".icon-radio-checked").index() + ")");
+			}
+			//全选
+			function both() {
+				if($('.icon-radio-checked').length == $(".list-icon-big-xuan").length + $(".list-icon-xuan").length) {
+					$(".list-icon-both").removeClass("icon-weixuanzhong").addClass("icon-radio-checked").css("color", '#ff464e');
+				} else if($('.icon-radio-checked').length != $(".list-icon-big-xuan").length + $(".list-icon-xuan").length + 1) {
+					$(".list-icon-both").removeClass("icon-radio-checked").addClass("icon-weixuanzhong").css("color", '#9b9b9b');
+				}
+			}
+
+			//价钱
+			function price() {
+				var sum = 0,
+					str;
+				$(".list-icon-xuan").each(function(i) {
+					if($(this).is(".icon-radio-checked")) {
+						str = $(this).parents(".list-pic-box").find(".list-price-pl-red").text();
+						sum += parseFloat(str.slice(1));
+					}
+				})
+				$(".b-price-top-p").text("￥" + sum.toFixed(2));
+			}
+			//数量
+			$(".list-price-add").click(function() {
+				var num = parseInt($(this).siblings(".list-price-num").text());
+				var price1 = parseFloat($(this).parents(".list-price").find(".list-price-pl-red").text().slice(1) / num);
+				num = num + 1;
+				if(num > 1) {
+					$(".list-price-sub").css("color", "#ff464e");
+				}
+				price1 = price1 * num;
+				$(this).parents(".list-price").find(".list-price-pl-red").text("￥" + price1.toFixed(2));
+				$(this).siblings(".list-price-num").text(num);
+				price();
+				sett();
+			})
+			$(".list-price-sub").click(function() {
+				var num = parseInt($(this).siblings(".list-price-num").text());
+				var price1 = parseFloat($(this).parents(".list-price").find(".list-price-pl-red").text().slice(1) / num);
+				num -= 1;
+				if(num == 0) {
+					num = 1;
+				}
+				if(num <= 1) {
+					$(".list-price-sub").css("color", "#ccc");
+				}
+				price1 = price1 * num;
+				$(this).parents(".list-price").find(".list-price-pl-red").text("￥" + price1.toFixed(2));
+				$(this).siblings(".list-price-num").text(num);
+				price();
+				sett();
+			})
+			//删除
+			$(".b-del").click(function() {
+				if($(".list-icon-xuan").is(".icon-radio-checked")) {
+					if($(".list-icon-big-xuan").is(".icon-radio-checked")) {
+						$(".list").eq($(".list-icon-big-xuan").index()).remove();
+					}
+					$(".list-icon-xuan").each(function(i) {
+						if($(this).is(".icon-radio-checked")) {
+							if($(this).is(".list-icon-big-xuan")) {
+								$(this).parents(".list").remove();
+							} else {
+								$(this).parents(".list-pic-box").remove();
+							}
+						}
+					})
+				} else {
+					var i = 2;
+					$(".popup-del").css("display", "block");
+
+					function pop() {
+						$(".popup-del").css("display", "block");
+						i--;
+						if(i < 0) {
+							clearInterval(timer);
+							$(".popup-del").css("display", "none");
+						}
+					}
+					timer = setInterval(pop, 1000);
+				}
+			})
+			//编辑
+			$(".am-header-right a").click(function() {
+				if(f == false) {
+					f = true;
+					$(this).text("完成");
+					$(".b-del").css("display", "block");
+					$(".b-fav").css("display", "block");
+					$(".b-price").css("display", "none");
+					$(".b-btn").css("display", "none");
+				} else if($(this).text() == "完成") {
+					f = false;
+					$(this).text("编辑");
+					$(".b-del").css("display", "none");
+					$(".b-fav").css("display", "none");
+					$(".b-price").css("display", "block");
+					$(".b-btn").css("display", "block");
+					$(".list-icon-big-xuan").removeClass("icon-radio-checked");
+					$(".list-icon-xuan").removeClass("icon-radio-checked");
+					price();
+				}
+			})
+			//选中的数量
+			function sett() {
+				var set = 0;
+				$(".list-pic-box").each(function(i) {
+					if($(this).find(".list-pic-xuan").find("i").is(".icon-radio-checked")) {
+						set += parseInt($(this).find(".list-price-num").text());
+					}
+				});
+				if(set > 0) {
+					$(".b-btn span").text("(" + set + ")");
+				} else {
+					$(".b-btn span").text("(0)");
+				}
+			};
+			//收藏夹
+			$(".b-fav").click(function() {
+				if($(".list-icon-xuan").is(".icon-radio-checked")) {
+					location.href = 'collection.html';
+				} else {
+					var i = 2;
+					$(".popup-del").css("display", "block");
+
+					function pop() {
+						$(".popup-del").css("display", "block");
+						i--;
+						if(i < 0) {
+							clearInterval(timer);
+							$(".popup-del").css("display", "none");
+						}
+					}
+					timer = setInterval(pop, 1000);
+				}
+
+			})
+		})
+	</script>
+
+</html>

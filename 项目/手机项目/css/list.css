@@ -1,0 +1,176 @@
+/*顶部*/
+
+body {
+	color: #333;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+
+/*swiper*/
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+
+/*头部*/
+
+.top-box-small {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 100000;
+}
+
+.am-header .top-title {
+	color: #333;
+}
+
+.top-i a i {
+	color: #333;
+}
+
+.top {
+	background-color: #FFFFFF;
+	/*position: fixed;
+	top: 0;
+	left: 0;*/
+}
+
+.search-box {
+	margin: 1rem;
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	background-color: #fff;
+	padding: .125rem 0;
+	text-align: left;
+	z-index: 10000;
+}
+
+.search-box a {
+	color: #999;
+}
+
+.search-icon {
+	padding: 0 1rem;
+}
+
+
+/*商品列表*/
+
+
+/*.comm-box {
+	position: fixed;
+	margin-top: 8.583rem;
+}*/
+
+
+/*左边*/
+
+.comm-left {
+	width: 25%;
+	background: #f9f9f9;
+	position: fixed;
+	top: 8.583rem;
+	left: 0;
+	z-index: 10000;
+	height: 100%;
+}
+
+.comm-left li {
+	float: none;
+	width: 100%;
+	border-left: 1px solid #f9f9f9;
+}
+
+.comm-box .comm-left li a {
+	color: #333;
+	padding: 1rem 0 1rem 1rem;
+	font-size: 1rem;
+}
+
+.comm-left .am-active {
+	color: #ff464e;
+	border: 0;
+	border-left: 1px solid #ff464e;
+	background-color: #fff;
+}
+
+.comm-box .comm-left li.am-active a {
+	border: 0;
+	border-left: 1px solid #ff464e;
+	color: #ff464e;
+}
+
+
+/*右边*/
+
+.comm-right {
+	width: 71%;
+	margin-left: 29%;
+	/*width: 100%;*/
+	border: 0;
+	position: relative;
+	right: 0;
+	top: 8.583rem;
+}
+
+.comm-right-lef {
+	width: 25%;
+	height: 100%;
+}
+
+.comm-right li {
+	text-align: center;
+	list-style: none;
+	padding: 0 0 1.5rem 0;
+}
+
+.comm-right .am-tab-panel ul li:last-child {
+	float: left;
+}
+
+.comm-right li .comm-right-a {
+	color: #333;
+	display: inline-block;
+}
+
+.comm-right-a img {
+	width: 100%;
+	display: inline-block;
+}
+
+.comm-right-a span {
+	display: inline-block;
+	font-size: 1rem;
+}

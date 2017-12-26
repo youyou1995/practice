@@ -1,0 +1,76 @@
+.top-title {
+	padding: 0;
+	background-color: #FFFFFF;
+	border-bottom: .04267rem solid #ebebeb;
+	height: 4.14rem;
+}
+
+.top-title-div {
+	text-align: center;
+}
+
+.top-title-div span {
+	display: inline-block;
+	text-align: center;
+	height: 100%;
+	width: auto;
+	box-sizing: border-box;
+	padding: 0 .81333rem;
+	color: #333;
+	font-size: 1.68267rem;
+	line-height: 49px;
+}
+
+.top-title .top-title-color {
+	color: #e66b00;
+	border-bottom: .08533rem solid #e66b00;
+	box-sizing: border-box;
+}
+
+
+/*分类*/
+
+.both-box {
+	background-color: #f4f4f8;
+	box-shadow: 0 .128rem .128rem rgba(51, 51, 51, .1);
+	position: fixed;
+	top: 4.1rem;
+	left: 0;
+	padding: 0.5rem 1rem;
+	width: 100%;
+}
+
+.both-title {
+	border: 1px solid #ccc;
+	background-color: #fff;
+	font-size: 1rem;
+	color: #666;
+	padding: 0.1rem 0.6rem;
+	border-radius: 1rem;
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+.both-title-color {
+	border: 1px solid #e66b00;
+	color: #e66b00;
+	background-color: #fff2e7;
+}
+
+
+/*图片*/
+
+.pic-box {
+	background-color: #f4f4f8;
+	/*position: relative;
+	top: 3.1666667rem;*/
+	padding-top: 3.1666667rem;
+}
+.pic-box a{
+	width: 100%;
+	margin-bottom: 0.8rem;
+}
+.pic-box a img{
+	width: 100%;
+	height: 100%;
+}
